@@ -14,7 +14,7 @@ Setiap kegiatan dilengkapi informasi lengkap beserta panduan pelaksanaan agar pe
 Informasi tanggal dan waktu kegiatan disajikan dengan jelas untuk mempermudah perencanaan relawan.
 
 *Pendaftaran dan Reservasi Tiket*  
-Sistem reservasi digunakan untuk kegiatan dengan kuota terbatas. Pendaftaran hanya dianggap sah setelah menyelesaikan donasi.
+Sistem reservasi digunakan untuk kegiatan dengan kuota terbatas. Pendaftaran hanya dianggap sah setelah menyelesaikan donasi dan/atau membeli tiket.
 
 *Akun Relawan*  
 Relawan diwajibkan memiliki akun untuk menyimpan riwayat event, melihat tiket, dan menerima notifikasi penting seputar kegiatan.
