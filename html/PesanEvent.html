@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cari Organisasi</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Sriracha&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/PesanEvent.css" />
+  </head>
+  <body>
+    <header>
+      <!-- navbar section -->
+      <div class="container navbar">
+        <h1 class="logo">TapakAsa</h1>
+        <nav>
+          <ul class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Cari Event</a></li>
+            <li><a href="cariOrganisasi.html">Cari Organisasi</a></li>
+            <li><a href="#">Buat Event</a></li>
+          </ul>
+        </nav>
+        <div class="profile" id="profile">
+          <img
+            src="assets/icons/User.svg"
+            alt="User Profile"
+            class="profile-pic"
+          />
+          <span class="profile-name">User</span>
+
+          <div class="dropdown-menu" id="dropdownMenu">
+            <a href="#">Edit Profil</a>
+            <a href="#">Tiket Saya</a>
+            <a href="#">Event Saya</a>
+            <a href="#">Log Out</a>
+          </div>
+        </div>
+        <div class="menu-toggle" id="menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </header>
+
+    <!-- ticket section -->
+    <main class="container main-content">
+      <section class="left-column">
+        <img
+          src="assets/img/cariOrganisasiIsi.png"
+          alt="Banner Event"
+          class="event-banner"
+        />
+        <div class="tabs">
+          <button class="tab active" onclick="showTab(event, 'deskripsi')">
+            DESKRIPSI
+          </button>
+          <button class="tab" onclick="showTab(event, 'tiket')">TIKET</button>
+        </div>
+        <div class="tab-content active" id="deskripsi">
+          <p>
+            Ada banyak cara untuk berbagi dan memberikan dampak baik untuk
+            lingkunngan sekitarmu, salah satunya dengan menjadi relawan. Selain
+            bisa membawa manfaat yang luar biasa untuk lingkunganmu, kamu juga
+            bisa mendapatkan pengalaman dan menambah makna untuk hari-harimu.
+          </p>
+          <p>
+            Voluntrip by TapakAsa hadir sebagai wadah untuk kamu yang inginn
+            mendapatkan pengalaman menjadi relawan dalam berbagai misi kebaikan.
+            Kali ini Voluntrip akan erkunjung ke Masajid IKHTIAR Kampus UIN
+            Sunan Kalijaga Yogyakarta, dan menjadi relawan Belajar Pembuatan
+            Jamur Tiram Bersama Kelompok Petani Perempuan. Kamu bisa ikut
+            terlibat dalam berbagai kegiatan berikut:
+          </p>
+          <ul>
+            <li>
+              Belajar pemeliharaan bedengan jamur tiram bersama kelompok petani
+              perempuan
+            </li>
+            <li>
+              Praktik pengolahan jamur tiram bersama kelompok petani perempuan
+            </li>
+          </ul>
+          <p>
+            Mohon untuk peserta untuk menjaga informasi pribadi masing-masing
+            peserta. Jika terdapat penyebaran informasi oleh peserta (seperti
+            bertukar nomor telp) bukan tanggung jawab tim Voluntrip
+          </p>
+          <p>
+            Dengan ikut menjaddi peserta Volluntrip, kamu sudah ikut menjadi
+            bagian dalam misi kebaikan untuk berbagi sesama makhluk hidup dan
+            mendapat perllindungan Asuransi TapakAsa selama kegiatan.
+          </p>
+          <p><strong>Yuk daftar sekarang!</strong></p>
+        </div>
+
+        <div class="tab-content" id="tiket">
+          <div class="ticket-box">
+            <h3>Belajar Pembuatan Jamur Tiram</h3>
+            <p class="with-icon">
+              <img src="assets/icons/Clockblue.svg" alt="" />Berakhir 6 Oktober
+              2025 - 15.00 WIB
+            </p>
+            <div class="ticket-info">
+              <span class="price">Rp235.000</span>
+              <span class="status sale-ended">SALE ENDED</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <aside class="right-column">
+        <div class="card event-info-card">
+          <h2>Belajar Menanam Jamur Tiram Bersama Petani Wanita</h2>
+          <p class="with-icon">
+            <img src="assets/icons/Schedule.svg" alt="" /> 07 Oktober – 10
+            Oktober 2025
+          </p>
+          <p class="with-icon">
+            <img src="assets/icons/Clock.svg" alt="" /> 09.00 – 15.00 WIB
+          </p>
+          <p class="with-icon">
+            <img src="assets/icons/PlaceMarker.svg" alt="" /> Pendopo Gunung
+            Kidul
+          </p>
+          <p class="aktivitas-organizer">Volunteer by TapakAsa</p>
+        </div>
+        <div class="card ticket-card">
+          <div class="ticket-card-top">
+            <img
+              src="assets/icons/TrainTicket.svg"
+              alt="Tiket"
+              class="ticket-photo"
+            />
+            <h2 class="ticket-content">
+              kamu belum memilih tiket. Silahkan pilih lebih dulu di tab menu
+              CARI AKTIVITAS.
+            </h2>
+          </div>
+          <div class="ticket-price-row">
+            <p>Harga mulai dari</p>
+            <p><strong>Rp235.000</strong></p>
+          </div>
+          <button class="btn buy-ticket-btn">Beli Tiket</button>
+        </div>
+      </aside>
+    </main>
+
+    <!-- footer section -->
+    <footer class="footer">
+      <div class="footer-left">
+        <h2>TapakAsa</h2>
+        <p>
+          <strong>TapakAsa</strong> adalah platform yang menghubungkan para
+          relawan <br />
+          dengan organisasi atau komunitas sosial
+        </p>
+        <p>
+          <strong>Wujudkan niat mulia menjadi tindakan nyata hari ini.</strong>
+        </p>
+        <p>
+          <strong>Volunteer Hub Yogyakarta</strong><br />
+          Yoyakarta 12160
+        </p>
+        <p>+62 811 9777 140</p>
+        <div class="sosmed-icons">
+          <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a
+          ><a href="#" class="social-icon"><i class="fab fa-twitter"></i></a
+          ><a href="#" class="social-icon"><i class="fab fa-instagram"></i></a
+          ><a href="#" class="social-icon"><i class="fab fa-youtube"></i></a
+          ><a href="#" class="social-icon"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+        </div>
+      </div>
+      <div class="footer-right">
+        <h3>Tentang TapakAsa</h3>
+        <ul>
+          <li><a href="#">Bantu Sekarang</a></li>
+          <li><a href="#">Kesempatan Karir</a></li>
+          <li><a href="#">Hubungi Kami</a></li>
+          <li><a href="#">Kemitraan CSR</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <script>
+      // toggle profile
+      const profile = document.getElementById("profile");
+      const dropdownMenu = document.getElementById("dropdownMenu");
+
+      profile.addEventListener("click", () => {
+        dropdownMenu.style.display =
+          dropdownMenu.style.display === "flex" ? "none" : "flex";
+      });
+
+      // Klik di luar akan menutup dropdown
+      window.addEventListener("click", function (e) {
+        if (!profile.contains(e.target)) {
+          dropdownMenu.style.display = "none";
+        }
+      });
+
+      function showTab(evt, tabId) {
+        const tabs = document.querySelectorAll(".tab");
+        const contents = document.querySelectorAll(".tab-content");
+
+        tabs.forEach((tab) => tab.classList.remove("active"));
+        contents.forEach((content) => content.classList.remove("active"));
+
+        document.getElementById(tabId).classList.add("active");
+        evt.target.classList.add("active");
+      }
+    </script>
+  </body>
+</html>
