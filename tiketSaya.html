@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tiket Saya</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Sriracha&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/tiketSaya.css" />
+  </head>
+  <body>
+    <div class="container">
+      <a href="#" class="back-button">
+        <img src="assets/icons/GoBack.svg" alt="Go Back" />
+      </a>
+
+      <div class="tabs">
+        <button class="tab-button active" data-tab="aktif">TIKET AKTIF</button>
+        <button class="tab-button" data-tab="lalu">TIKET LALU</button>
+        <button class="tab-button" data-tab="riwayat">RIWAYAT PEMBELIAN</button>
+      </div>
+
+      <div class="tab-content active" id="aktif">
+        <h3>Tiket Anda</h3>
+        <div class="ticket-card">
+          <div class="text-wrapper">
+            <p class="ticket-title">Belajar Memahami Masa Depan</p>
+            <p class="ticket-time">
+              <img src="assets/icons/Clockblue.svg" alt="jam" /> Berakhir 6
+              Oktober 2025 · 15.00 WIB
+            </p>
+            <p class="ticket-price">Rp235.000</p>
+          </div>
+        </div>
+        <div class="ticket-card">
+          <div class="text-wrapper">
+            <p class="ticket-title">Belajar Pembuatan Pupuk Organik</p>
+            <p class="ticket-time">
+              <img src="assets/icons/Clockblue.svg" alt="jam" /> Berakhir 6
+              Oktober 2025 · 15.00 WIB
+            </p>
+            <p class="ticket-price">Rp235.000</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-content" id="lalu">
+        <h3>Tiket Anda</h3>
+        <div class="ticket-card">
+          <div class="text-wrapper">
+            <p class="ticket-title">Belajar Pembuatan Jamur Tiram</p>
+            <p class="ticket-time">
+              <img src="assets/icons/Clockblue.svg" alt="jam" /> Berakhir 6
+              Oktober 2025 · 15.00 WIB
+            </p>
+            <p class="ticket-price">Rp235.000</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-content" id="riwayat">
+        <h3>Riwayat Pembelian Anda</h3>
+        <div class="ticket-card">
+          <div class="text-wrapper">
+            <p class="ticket-title">Belajar Memahami Masa Depan</p>
+            <p class="ticket-time">
+              <img src="assets/icons/Clockblue.svg" alt="jam" /> Berakhir 6
+              Oktober 2025 · 15.00 WIB
+            </p>
+            <p class="ticket-price">Rp235.000</p>
+          </div>
+        </div>
+        <div class="ticket-card">
+          <div class="text-wrapper">
+            <p class="ticket-title">Belajar Pembuatan Pupuk Organik</p>
+            <p class="ticket-time">
+              <img src="assets/icons/Clockblue.svg" alt="jam" /> Berakhir 6
+              Oktober 2025 · 15.00 WIB
+            </p>
+            <p class="ticket-price">Rp235.000</p>
+          </div>
+        </div>
+        <div class="ticket-card">
+          <div class="text-wrapper">
+            <p class="ticket-title">Belajar Pembuatan Jamur Tiram</p>
+            <p class="ticket-time">
+              <img src="assets/icons/Clockblue.svg" alt="jam" /> Berakhir 6
+              Oktober 2025 · 15.00 WIB
+            </p>
+            <p class="ticket-price">Rp235.000</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const tabButtons = document.querySelectorAll(".tab-button");
+      const tabContents = document.querySelectorAll(".tab-content");
+
+      tabButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          // Aktifkan tab yang dipilih
+          tabButtons.forEach((btn) => btn.classList.remove("active"));
+          tabContents.forEach((content) => content.classList.remove("active"));
+
+          button.classList.add("active");
+          document.getElementById(button.dataset.tab).classList.add("active");
+        });
+      });
+    </script>
+  </body>
+</html>

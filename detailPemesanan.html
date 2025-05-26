@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Detail Pemesanan Tiket</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Sriracha&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/detailPemesanan.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- header -->
+      <a href="cariOrganisasi.html" class="back-button">
+        <img src="assets/icons/GoBack.svg" alt="Go Back" />
+      </a>
+      <h2 class="section-title main-title">Detail Pemesanan</h2>
+
+      <main class="main-content">
+        <section class="left-column">
+          <!-- Detail Pemesanan -->
+          <div class="card detail-pemesanan">
+            <div class="event-info">
+              <img src="assets/img/cariOrganisasiIsi.png" alt="Event Image" />
+              <div class="event-text">
+                <h2>Belajar Menanam Jamur Tiram...</h2>
+                <p class="with-icon">
+                  <img src="assets/icons/Schedule.svg" alt="" /> 07 Oktober – 10 Oktober 2025
+                </p>
+                <p class="with-icon">
+                  <img src="assets/icons/Clock.svg" alt="" /> 09.00 – 15.00 WIB
+                </p>
+                <p class="with-icon">
+                  <img src="assets/icons/PlaceMarker.svg" alt="" /> Pendopo Gunung Kidul
+                </p>
+              </div>
+            </div>
+            <table class="ticket-summary">
+              <thead>
+                <tr>
+                  <th>Jenis Tiket</th>
+                  <th>Harga</th>
+                  <th>Jumlah</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="ticket-info">
+                      <img
+                        src="assets/icons/TrainTicket.svg"
+                        alt="icon"
+                        class="ticket-icon"
+                      />
+                      <span class="ticket-name"
+                        >Belajar Menanam Jamur Tiram...</span
+                      >
+                    </div>
+                  </td>
+                  <td>Rp235.000</td>
+                  <td>x1</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Form Detail Pemesan -->
+          <div class="form-pemesanan">
+            <h2 class="section-title form-title">Detail Pemesan</h2>
+            <div class="ticket-header">
+              <span class="ticket-label"
+                >Tiket 1: Belajar Menanam Jamur Tiram Bersama Petani
+                Wanita</span
+              >
+            </div>
+
+            <form class="card form-pemesan" novalidate>
+              <p class="info-text">
+                <img src="assets/icons/PenerimaInformasi.svg" alt="" /> Penerima informasi
+                transaksi
+              </p>
+
+              <label for="namaLengkap"
+                >Nama Lengkap <span class="required">*</span></label
+              >
+              <label for="" class="sub-title"
+                >Gunakan nama yang tertera di KTP/Paspor</label
+              >
+              <input type="text" id="namaLengkap" name="namaLengkap" required />
+
+              <label for="email">Email <span class="required">*</span></label>
+              <label for="" class="sub-title"
+                >E-tiket akan dikirim ke email kamu</label
+              >
+              <input type="email" id="email" name="email" required />
+
+              <label for="tanggalLahir"
+                >Tanggal Lahir <span class="required">*</span></label
+              >
+              <input
+                type="date"
+                id="tanggalLahir"
+                name="tanggalLahir"
+                required
+              />
+
+              <label for="jenisKelamin"
+                >Jenis Kelamin <span class="required">*</span></label
+              >
+              <select id="jenisKelamin" name="jenisKelamin" required>
+                <option value="" disabled selected>Pilih Jenis Kelamin</option>
+                <option value="pria">Laki Laki</option>
+                <option value="wanita">Perempuan</option>
+              </select>
+
+              <label for="nik">NIK <span class="required">*</span></label>
+              <label for="" class="sub-title"
+                >Peserta akan mendapatkan perlindungan asuransi.</label
+              >
+              <input type="text" id="nik" name="nik" required />
+
+              <label for="asalInfo"
+                >Dari Mana Anda Tau Kegiatan Ini?
+                <span class="required">*</span></label
+              >
+              <select id="asalInfo" name="asalInfo" required>
+                <option value="mediaSosial" selected>
+                  Media Sosial (Tiktok)
+                </option>
+                <option value="teman">Teman</option>
+                <option value="iklan">Iklan</option>
+                <option value="lainnya">Lainnya</option>
+              </select>
+
+              <fieldset class="radio-group">
+                <legend>
+                  Berapa Rentang Usia Anda? <span class="required">*</span>
+                </legend>
+                <label
+                  ><input
+                    type="radio"
+                    name="rentangUsia"
+                    value="<18"
+                    required
+                  />
+                  < 18 tahun</label
+                >
+                <label
+                  ><input type="radio" name="rentangUsia" value="18-25" /> 18 -
+                  25 tahun</label
+                >
+                <label
+                  ><input type="radio" name="rentangUsia" value="26-30" /> 26 -
+                  30 tahun</label
+                >
+                <label
+                  ><input type="radio" name="rentangUsia" value="31-35" /> 31 -
+                  35 tahun</label
+                >
+                <label
+                  ><input type="radio" name="rentangUsia" value=">35" /> > 35
+                  tahun</label
+                >
+              </fieldset>
+
+              <label for="akunSosmed"
+                >Akun Media Sosial <span class="required">*</span></label
+              >
+              <label for="" class="sub-title">Instagram atau Tiktok</label>
+              <input type="text" id="akunSosmed" name="akunSosmed" required />
+
+              <fieldset class="radio-group">
+                <legend>
+                  Apakah Anda Sudah Berkeluarga? <span class="required">*</span>
+                </legend>
+                <label
+                  ><input
+                    type="radio"
+                    name="statusKeluarga"
+                    value="belum berkeluarga"
+                    required
+                  />
+                  Belum berkeluarga</label
+                >
+                <label
+                  ><input
+                    type="radio"
+                    name="statusKeluarga"
+                    value="sudah berkeluarga dan belum memiliki anak"
+                  />
+                  Sudah berkeluarga dan belum memiliki anak</label
+                >
+                <label
+                  ><input
+                    type="radio"
+                    name="statusKeluarga"
+                    value="sudah berkeluarga dan memiliki anak"
+                  />
+                  Sudah berkeluarga dan memiliki anak</label
+                >
+              </fieldset>
+
+              <fieldset class="radio-group">
+                <legend>
+                  Saya Bersedia Untuk Membaca dan Menaati Handbook?
+                  <span class="required">*</span>
+                </legend>
+                <label
+                  ><input type="radio" name="Bersedia" value="YA" /> YA</label
+                >
+                <label
+                  ><input type="radio" name="Tidak Bersedia" value="TIDAK" />
+                  TIDAK</label
+                >
+              </fieldset>
+            </form>
+          </div>
+
+          <div class="form-note">
+            <img src="assets/icons/Important.svg" alt="important" />
+            <span>Pastikan datamu sudah benar.</span>
+          </div>
+
+          <!-- Metode Pembayaran -->
+          <div class="payment-section">
+            <h2>Metode Pembayaran</h2>
+
+            <div class="payment-card">
+              <button class="payment-header" onclick="toggleDropdown(this)">
+                <span>E-Wallet</span>
+                <span class="arrow">⌄</span>
+              </button>
+              <div class="payment-options">
+                <img src="assets/img/GoPay.png" alt="gopay" />
+                <img src="assets/img/shopeepay.png" alt="ShopeePay" />
+                <img src="assets/img/dana.png" alt="Dana" />
+                <img src="assets/img/link.png" alt="LinkAja" />
+                <img src="assets/img/ovo.png" alt="OVO" />
+              </div>
+            </div>
+
+            <div class="payment-card">
+              <button class="payment-header" onclick="toggleDropdown(this)">
+                <span>Virtual Account</span>
+                <span class="arrow">⌄</span>
+              </button>
+              <div class="payment-options">
+                <img src="assets/img/bri.png" alt="BRI" />
+                <img src="assets/img/bni.png" alt="BNI" />
+                <img src="assets/img/mandiri.png" alt="Mandiri" />
+                <img src="assets/img/bsi.png" alt="BSI" />
+                <img src="assets/img/cimb.png" alt="CIMB" />
+              </div>
+            </div>
+
+            <div class="payment-card">
+              <button class="payment-header" onclick="toggleDropdown(this)">
+                <span>QR</span>
+                <span class="arrow">⌄</span>
+              </button>
+              <div class="payment-options">
+                <img src="assets/img/qris.png" alt="qris" />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <aside class="right-column">
+          <div class="timer">
+            <span class="time" id="countdown">15:00</span>
+            <span class="message">Segera selesaikan pesananmu</span>
+          </div>
+
+          <div class="card payment-summary">
+            <div class="promo-code">
+              <input
+                type="text"
+                placeholder="Masukkan Kode Promo"
+                aria-label="Kode Promo"
+              />
+              <button type="button">Terapkan</button>
+            </div>
+
+            <p>
+              Pilih mode pembayaran terlabih dahulu untuk <br />menggunakan kode
+              promo
+            </p>
+
+            <div class="price-details">
+              <h3>Detail Harga</h3>
+              <ul>
+                <li><span>Total Harga Tiket</span><span>Rp235.000</span></li>
+                <li><span>Biaya Platform</span><span>Rp0</span></li>
+              </ul>
+              <div class="total-bayar">
+                <span>Total Bayar</span>
+                <span>Rp235.000</span>
+              </div>
+            </div>
+
+            <form class="agreement-form" novalidate>
+              <label>
+                <input type="checkbox" required />
+                Saya setuju dengan <a href="#">Syarat dan Ketentuan</a> yang
+                berlaku di TapakAsa®
+              </label>
+              <label>
+                <input type="checkbox" required />
+                Saya setuju dengan <a href="#">Pemrosesan Data Pribadi</a> yang
+                berlaku di TapakAsa®
+              </label>
+              <p class="warning-text">
+                Syarat & Ketentuan dan Pemrosesan Data Pribadi harus disetujui!
+              </p>
+              <button type="submit" class="btn-pay">Beli Tiket</button>
+            </form>
+          </div>
+        </aside>
+      </main>
+    </div>
+
+    <!-- footer section -->
+    <footer class="footer">
+      <div class="footer-left">
+        <h2>TapakAsa</h2>
+        <p>
+          <strong>TapakAsa</strong> adalah platform yang menghubungkan para
+          relawan <br />
+          dengan organisasi atau komunitas sosial
+        </p>
+        <p>
+          <strong>Wujudkan niat mulia menjadi tindakan nyata hari ini.</strong>
+        </p>
+        <p>
+          <strong>Volunteer Hub Yogyakarta</strong><br />
+          Jl. Sudirman V No.60 <br />
+          Yoyakarta 12160
+        </p>
+        <p>+62 811 9777 140</p>
+        <div class="sosmed-icons">
+          <a href="#" class="social-icon"
+            ><img src="assets/icons/facebook.svg" alt="facebook"
+          /></a>
+          <a href="#" class="social-icon"><img src="assets/icons/whatsapp.svg" alt="whatsapp"></a>
+          <a href="#" class="social-icon"><img src="assets/icons/tiktok.svg" alt="tiktok"></a>
+          <a href="#" class="social-icon"><img src="assets/icons/youtube.svg" alt="youtube"></a>
+          <a href="#" class="social-icon"><img src="assets/icons/instagram.svg" alt="instagram"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-right">
+        <h3>Tentang TapakAsa</h3>
+        <ul>
+          <li><a href="#">Bantu Sekarang</a></li>
+          <li><a href="#">Kesempatan Karir</a></li>
+          <li><a href="#">Hubungi Kami</a></li>
+          <li><a href="#">Kemitraan CSR</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <script>
+      function toggleDropdown(button) {
+        const card = button.closest(".payment-card");
+        card.classList.toggle("open");
+        const options = card.querySelector(".payment-options");
+        if (options.style.display === "flex") {
+          options.style.display = "none";
+        } else {
+          options.style.display = "flex";
+        }
+      }
+
+      // Countdown Timer
+      let countdownEl = document.getElementById("countdown");
+      let timeLeft = 15 * 60; // 15 menit dalam detik
+
+      function updateCountdown() {
+        let minutes = Math.floor(timeLeft / 60);
+        let seconds = timeLeft % 60;
+
+        // Format waktu 2 digit
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        countdownEl.textContent = `${minutes}:${seconds}`;
+
+        if (timeLeft > 0) {
+          timeLeft--;
+        } else {
+          clearInterval(timer);
+          countdownEl.textContent = "00:00";
+          // Optional: aksi kalau waktu habis
+          alert("Waktu pembayaran telah habis!");
+        }
+      }
+
+      // Mulai countdown
+      updateCountdown();
+      let timer = setInterval(updateCountdown, 1000);
+    </script>
+  </body>
+</html>

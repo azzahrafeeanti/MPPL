@@ -1,0 +1,654 @@
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #f9fbff;
+  color: #1a2a3a;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  display: flex;
+  gap: 20px;
+  flex: 1;
+}
+
+/* Left and Right columns */
+.left-column {
+  flex: 7;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.right-column {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Card style */
+
+/* Back button */
+.back-button {
+  display: inline-block;
+  margin-bottom: 0;
+  margin-top: 20px;
+  font-weight: 600;
+  color: #66c0ff;
+  text-decoration: none;
+  cursor: pointer;
+  user-select: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.back-button:hover {
+  color: #4a9de8;
+}
+
+.main-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #0a3d62;
+}
+
+/* Detail Pemesanan */
+/* .form-pemesan h2,
+.metode-pembayaran h2 {
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin: 0 0 15px 0;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #cbd6e2;
+  color: #0a3d62;
+} */
+
+.card {
+  background-color: #fff;
+  padding: 24px;
+  border-radius: 20px;
+  border: 1px solid #f4f4f4;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.event-info {
+  display: flex;
+  gap: 20px;
+  align-items: stretch;
+}
+
+.event-info img {
+  width: 250px;
+  height: 140px;
+  object-fit: cover;
+  aspect-ratio: 4 / 3;
+  border-radius: 15px;
+}
+
+.event-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  max-height: 140px; /* Sesuai tinggi gambar */
+  overflow: hidden;
+}
+
+.event-text h2 {
+  font-size: 24px;
+  margin: 0 0 6px 0;
+  line-height: 1.2;
+  color: #213943;
+  font-family: "poppins", sans-serif;
+  font-weight: Bold;
+}
+
+.event-text p {
+  font-size: 14px;
+  margin: 0;
+  font-weight: 400;
+  color: #213943;
+  font-family: "poppins", sans-serif;
+  padding-left: 10px;
+}
+
+.event-text p.with-icon {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.event-text p.with-icon img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+/* Ticket  table */
+.ticket-summary {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.ticket-summary th {
+  background-color: transparent;
+  padding: 12px;
+  text-align: left;
+  color: #213943;
+  font-size: 15px;
+  font-weight: 550;
+  border-top: 2px solid #e5e5e5;
+}
+
+.ticket-summary td {
+  padding: 12px;
+  vertical-align: middle;
+  border-top: 2px solid #e5e5e5;
+}
+
+.ticket-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ticket-icon {
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
+.ticket-name {
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: #213943;
+}
+
+/* Form Detail Pemesan */
+.ticket-header {
+  background-color: #f2f9ff;
+  padding: 10px 16px;
+  border-radius: 8px 8px 0 0;
+  font-weight: 600;
+  color: #213943;
+  font-size: 14px;
+  border: 1px solid #cbd6e2;
+  border-bottom: none;
+}
+
+.ticket-label {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.info-text {
+  border-bottom: 2px solid #e5e5e5;
+  padding-bottom: 10px;
+}
+
+.form-pemesan p.info-text {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: -8px; /* naikkan ke atas */
+  margin-bottom: 20px;
+  color: #ababab;
+  font-family: Poppins;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.form-pemesan p.info-text img {
+  width: 25px;
+  height: 25px;
+  object-fit: contain;
+}
+
+.form-pemesan .sub-title {
+  color: #ababab;
+  font-family: Poppins;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.card.form-pemesan {
+  padding: 20px;
+  border: 1px solid #cbd6e2;
+  border-radius: 0 0 8px 8px;
+}
+
+.form-pemesan label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: #0a3d62;
+}
+
+.form-pemesan select {
+  appearance: none; /* Hilangkan tampilan default browser */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: #fff;
+}
+
+.form-pemesan input[type="text"],
+.form-pemesan input[type="email"],
+.form-pemesan input[type="date"],
+.form-pemesan select {
+  width: 100%; /* Ubah jadi 100% */
+  box-sizing: border-box; /* Pastikan padding + border dihitung dalam lebar total */
+  padding: 10px 14px;
+  margin-bottom: 15px;
+  border: 1.5px solid #cbd6e2;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #1a2a3a;
+  transition: border-color 0.3s ease;
+  background-color: #fff;
+}
+
+.form-pemesan input[type="text"]:focus,
+.form-pemesan input[type="email"]:focus,
+.form-pemesan input[type="date"]:focus,
+.form-pemesan select:focus {
+  outline: none;
+  border-color: #66c0ff;
+  box-shadow: 0 0 6px #66c0ff88;
+}
+
+.required {
+  color: #e74c3c;
+  margin-left: 2px;
+}
+
+/* Radio groups */
+.radio-group {
+  margin-bottom: 15px;
+  border: none;
+  padding: 0;
+}
+
+.radio-group legend {
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #0a3d62;
+}
+
+.radio-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 400;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #1a2a3a;
+}
+
+.radio-group input[type="radio"] {
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.form-note {
+  background-color: #fff8e1;
+  padding: 10px 14px;
+  margin-top: 15px;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #7a6600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+/* Metode Pembayaran - Accordion */
+.payment-section {
+  border-top: 5px solid #e1e7ee;
+  padding-top: 20px;
+  margin-top: 30px;
+}
+
+.payment-section h2 {
+  font-size: 1.4rem;
+  margin-bottom: 16px;
+}
+
+.payment-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  transition: box-shadow 0.2s ease;
+  background-color: #fff;
+}
+
+.payment-card:hover {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.payment-header {
+  width: 100%;
+  padding: 14px 16px;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: transparent;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.payment-header .arrow {
+  transition: transform 0.3s ease;
+}
+
+.payment-card.open .arrow {
+  transform: rotate(180deg);
+}
+
+.payment-options {
+  display: none;
+  padding: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  border-top: 1px solid #eee;
+}
+
+.payment-options img {
+  width: 80px;
+  height: 40px;
+  object-fit: contain;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 6px 10px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+}
+
+/* Right column timer */
+.timer {
+  background: #ffdb4d;
+  color: #4a4a4a;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  user-select: none;
+}
+
+.timer .time {
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+.timer .message {
+  border-left: 2px solid #d6b700;
+  padding-left: 12px;
+}
+
+/* Payment summary */
+.payment-summary .promo-code {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.payment-summary .promo-code input[type="text"] {
+  flex: 1;
+  padding: 10px 14px;
+  border-radius: 15px;
+  border: 1px solid #d9d9d9;
+  font-family: Poppins;
+  font-weight: 500;
+  background: #f5f5f5;
+  font-size: 17px;
+  color: #878787;
+}
+
+.payment-summary .promo-code button {
+  border-radius: 15px;
+  background: #ababab;
+  border: none;
+  padding: 10px 20px;
+  color: #fff;
+  font-family: Poppins;
+  font-size: 18px;
+  font-weight: 600;
+  color: #555;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.payment-summary .promo-code button:hover {
+  background: #a0b9d9;
+  color: white;
+}
+
+.payment-summary p {
+  color: #878787;
+  font-family: Poppins;
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+
+/* Price details */
+.price-details h3 {
+  color: #213943;
+  font-family: Poppins;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.price-details ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 15px 0;
+}
+
+.price-details ul li {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  color: #585858;
+  font-family: Poppins;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.total-bayar {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #0a3d62;
+  border-top: 1px solid #cbd6e2;
+  border-bottom: 1px solid #cbd6e2;
+  padding: 10px 0;
+}
+
+/* Agreement form */
+.agreement-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.agreement-form label {
+  font-size: 0.9rem;
+  color: #1a2a3a;
+  cursor: pointer;
+}
+
+.agreement-form input[type="checkbox"] {
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.agreement-form a {
+  color: #66c0ff;
+  text-decoration: none;
+}
+
+.agreement-form a:hover {
+  text-decoration: underline;
+}
+
+.warning-text {
+  color: #ff4d4d;
+  font-size: 0.85rem;
+  margin-top: -8px;
+  margin-bottom: 10px;
+}
+
+/* Pay button */
+.btn-pay {
+  background: #66c0ff;
+  border: none;
+  border-radius: 12px;
+  padding: 14px 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 6px 12px rgba(102, 192, 255, 0.6);
+  transition: background 0.3s ease;
+}
+
+.btn-pay:hover {
+  background: #4a9de8;
+}
+
+/* Footer styles */
+/* Footer styles */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f2f2f2;
+  padding: 40px 60px;
+  font-family: "Poppins", sans-serif;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.footer-left,
+.footer-right {
+  flex: 1 1 300px;
+  min-width: 280px;
+}
+
+.footer-left h2 {
+  font-family: "Sriracha", cursive;
+  font-size: 40px;
+  color: #213943;
+  margin-bottom: 15px;
+}
+
+.footer-left p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.footer-left p strong {
+  font-weight: bold;
+  color: #213943;
+}
+
+.sosmed-icons {
+  display: flex;
+  gap: 12px;
+}
+
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.footer-right h3 {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #213943;
+  margin-bottom: 20px;
+}
+
+.footer-right ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-right ul li {
+  margin-bottom: 15px;
+}
+
+.footer-right ul li a {
+  color: #555;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.footer-right ul li a:hover {
+  color: #66c0ff;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .aktivitas-cards,
+  .blog-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .aktivitas-btn {
+    width: 100%;
+  }
+
+  .footer {
+    flex-direction: column;
+    padding: 30px 20px;
+  }
+
+  .footer-left,
+  .footer-right {
+    min-width: 100%;
+  }
+}

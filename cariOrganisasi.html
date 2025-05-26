@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cari Organisasi</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Sriracha&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/cariOrganisasi.css" />
+  </head>
+  <body>
+    <header>
+      <!-- navbar section -->
+      <div class="container navbar">
+        <h1 class="logo">TapakAsa</h1>
+        <nav>
+          <ul class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Cari Event</a></li>
+            <li><a href="cariOrganisasi.html">Cari Organisasi</a></li>
+            <li><a href="#">Buat Event</a></li>
+          </ul>
+        </nav>
+        <div class="profile">
+          <img
+            src="assets/icons/User.svg"
+            alt="User Profile"
+            class="profile-pic"
+          />
+          <span class="profile-name">Nama User</span>
+        </div>
+        <div class="menu-toggle" id="menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </header>
+
+    <!-- hero section -->
+    <h2 class="section-title">Cari Organisasi</h2>
+    <main class="main-content">
+      <div class="container main-container">
+        <!-- Sidebar filter column -->
+        <aside class="sidebar">
+          <form class="filter-form">
+            <div class="form-group">
+              <label for="search-text">Cari Organisasi</label>
+              <input
+                type="text"
+                id="search-text"
+                name="search-text"
+                placeholder="Cari nama organisasi..."
+              />
+            </div>
+            <div class="form-group">
+              <label for="location">Lokasi</label>
+              <select id="location" name="location">
+                <option value="">Semua Lokasi</option>
+                <option value="jakarta">Jakarta</option>
+                <option value="bandung">Bandung</option>
+                <option value="surabaya">Surabaya</option>
+                <option value="yogyakarta">Yogyakarta</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="focus">Fokus Organisasi</label>
+              <select id="focus" name="focus">
+                <option value="">Semua Fokus</option>
+                <option value="pendidikan">Pendidikan</option>
+                <option value="pengembangan-masyarakat">
+                  Pengembangan Masyarakat
+                </option>
+                <option value="kesehatan">Kesehatan</option>
+                <option value="lingkungan">Lingkungan</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="type">Tipe Organisasi</label>
+              <select id="type" name="type">
+                <option value="">Semua Tipe</option>
+                <option value="nirlaba">Nirlaba</option>
+                <option value="komersial">Komersial</option>
+                <option value="pemerintah">Pemerintah</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="order">Urutan</label>
+              <select id="order" name="order">
+                <option value="terbaru">Terbaru</option>
+                <option value="terpopuler">Terpopuler</option>
+                <option value="teraktif">Teraktif</option>
+              </select>
+            </div>
+            <button type="reset" class="btn reset-btn">Reset All</button>
+          </form>
+        </aside>
+
+        <!-- Organization cards column -->
+        <section class="org-list">
+          <article class="org-card">
+            <img
+              src="assets/img/cariOrganisasi.png"
+              alt="Organisasi Pendidikan Maju"
+              class="org-photo"
+            />
+            <div class="org-content">
+              <h3 class="org-name">Organisasi Pendidikan Maju</h3>
+              <p class="org-location">
+                <i class="fa-solid fa-location-dot"></i> Jakarta
+              </p>
+              <div class="org-focus-badges">
+                <span class="badge">Pendidikan</span>
+                <span class="badge">Pengembangan Masyarakat</span>
+              </div>
+              <div class="org-info">
+                <span
+                  ><i class="fa-solid fa-calendar-check"></i> 12 Aktivitas</span
+                >
+                <span><i class="fa-solid fa-users"></i> 34 Relawan</span>
+                <span><i class="fa-solid fa-handshake"></i> 20 Pendukung</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="org-card">
+            <img
+              src="assets/img/cariOrganisasi.png"
+              alt="Organisasi Kesehatan Sehat"
+              class="org-photo"
+            />
+            <div class="org-content">
+              <h3 class="org-name">Organisasi Kesehatan Sehat</h3>
+              <p class="org-location">
+                <i class="fa-solid fa-location-dot"></i> Bandung
+              </p>
+              <div class="org-focus-badges">
+                <span class="badge">Kesehatan</span>
+                <span class="badge">Lingkungan</span>
+              </div>
+              <div class="org-info">
+                <span
+                  ><i class="fa-solid fa-calendar-check"></i> 8 Aktivitas</span
+                >
+                <span><i class="fa-solid fa-users"></i> 20 Relawan</span>
+                <span><i class="fa-solid fa-handshake"></i> 15 Pendukung</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="org-card">
+            <img
+              src="assets/img/cariOrganisasi.png"
+              alt="Organisasi Lingkungan Bersih"
+              class="org-photo"
+            />
+            <div class="org-content">
+              <h3 class="org-name">Organisasi Lingkungan Bersih</h3>
+              <p class="org-location">
+                <i class="fa-solid fa-location-dot"></i> Yogyakarta
+              </p>
+              <div class="org-focus-badges">
+                <span class="badge">Lingkungan</span>
+                <span class="badge">Pengembangan Masyarakat</span>
+              </div>
+              <div class="org-info">
+                <span
+                  ><i class="fa-solid fa-calendar-check"></i> 15 Aktivitas</span
+                >
+                <span><i class="fa-solid fa-users"></i> 40 Relawan</span>
+                <span><i class="fa-solid fa-handshake"></i> 25 Pendukung</span>
+              </div>
+            </div>
+          </article>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>

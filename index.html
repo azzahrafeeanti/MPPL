@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TapakAsa</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Sriracha&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <!-- navbar section -->
+      <div class="container">
+        <h1 class="logo">TapakAsa</h1>
+        <nav>
+          <ul class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="cariAktivitas.html">Cari Event</a></li>
+            <li><a href="buatEventJADI.html">Buat Event</a></li>
+          </ul>
+        </nav>
+        <div class="auth-buttons">
+          <a href="SignUp.html" class="btn neutral-btn">Daftar</a>
+          <a href="SignIn.html" class="btn login-btn">Masuk</a>
+        </div>
+        <div class="menu-toggle" id="menu-toggle">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+    </header>
+
+    <!-- Sidebar Menu -->
+    <div class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h2>Masuk ke Akunmu</h2>
+        <p>Untuk menggunakan semua fitur di TapakAsa</p>
+        <div class="sidebar-auth">
+          <a href="SignUp.html" class="btn outline-btn">Daftar</a>
+          <a href="SignIn.html" class="btn fill-btn">Masuk</a>
+        </div>
+        <button class="close-btn" id="close-sidebar">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <ul class="sidebar-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cariAktivitas.html">Cari Event</a></li>
+        <li><a href="buatEventJADI.html">Buat Event</a></li>
+      </ul>
+    </div>
+
+
+    <!-- hero section -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1>
+          Tinggalkan <br />
+          Jejak. Tebarkan <br />
+          Harapan
+        </h1>
+        <p>
+          Setiap langkah kecilmu adalah cahaya <br />
+          besar bagi mereka yang membutuhkan
+        </p>
+        <button class="cta-button">Baca Selengkapnya</button>
+      </div>
+    </section>
+
+    <section class="stats-cards">
+      <div class="card small-card">
+        <div class="icon-text">
+          <img src="assets/icons/relawan.svg" alt="relawan">
+          <div class="text-content">
+            <div class="number">603.005</div>
+            <div class="label">Relawan</div>
+          </div>
+        </div>
+      </div>
+      <div class="card small-card">
+        <div class="icon-text">
+          <img src="assets/icons/organisasi.svg" alt="organisasi">
+          <div class="text-content">
+            <div class="number">603.005</div>
+            <div class="label">Organisasi</div>
+          </div>
+        </div>
+      </div>
+      <div class="card small-card">
+        <div class="icon-text">
+          <img src="assets/icons/aktivitas.svg" alt="">
+          <div class="text-content">
+            <div class="number">603.005</div>
+            <div class="label">Aktivitas</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- layanan section -->
+    <section class="layanan-section">
+      <div class="container layanan-container">
+        <h3 class="section-title">
+          Kenali Layanan TapakAsa <br />
+          untuk Langkah Awal Kebaikanmu
+        </h3>
+        <div class="layanan-cards">
+          <div class="layanan-card">
+            <img src="assets/icons/jdrelawan.svg" alt="jadi relawan">
+            <h3>Jadi Relawan</h3>
+            <p>
+              Baru memulai untuk jadi relawan? <br> Pelajari selangkapnya dan mulai cari aktivitas kerelawanan pertamamu!
+            </p>
+            <a href="cariAktivitas.html" class="btn layanan-btn"
+              >Cari Aktivitas</a
+            >
+          </div>
+          <div class="layanan-card">
+            <img src="assets/icons/carirelawan.svg" alt="cari relawan">
+            <h3>Cari Relawan</h3>
+            <p>Butuh bantuan relawan untuk komunikasimu? Pelajari selengkapnya dan temukan relawan yang tepat!</p>
+            <a href="#" class="btn layanan-btn">Lihat Panduan</a>
+          </div>
+          <div class="layanan-card">
+            <img src="assets/icons/csr.svg" alt="csr">
+            <h3>Kerjasama CSR</h3>
+            <p>
+             Tingkatkan dampak program CSR perusahaan bersama kami dengan melibatkan komunitas lokal dan relawan!
+            </p>
+            <a href="CSR.html" class="btn layanan-btn">Baca Selengkapnya</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- aktivitas section -->
+    <section class="aktivitas-section">
+      <div class="container aktivitas-container">
+        <h3 class="section-title aktivitas-judul">
+          Ada Aktivitas Perlu Bantuan Kamu Nih!
+        </h3>
+        <p class="section-subtitle">
+          Pilih aktivitas kerelawanan sesuai lokasi, minat, dan isu yang kamu
+          sukai
+        </p>
+        <div class="aktivitas-cards">
+          <div class="aktivitas-card">
+            <img
+              src="assets/img/aktivitas1.png"
+              alt="Aktivitas 1"
+              class="aktivitas-image"
+            />
+            <h4 class="aktivitas-title">Wisata dan Berbagi Cerita Bersama Adik Binaan</h4>
+            <p class="aktivitas-date">25 Mei 2025</p>
+            <p class="aktivitas-price">Rp125.000</p>
+          </div>
+          <div class="aktivitas-card">
+            <img
+              src="assets/img/aktivitas2.png"
+              alt="Aktivitas 2"
+              class="aktivitas-image"
+            />
+            <h4 class="aktivitas-title">Senam Ceria dan Main Bersama Para Lansia</h4>
+            <p class="aktivitas-date">25 Mei 2025</p>
+            <p class="aktivitas-price">Rp165.000</p>
+          </div>
+          <div class="aktivitas-card">
+            <img
+              src="assets/img/aktivitas3.png"
+              alt="Aktivitas 3"
+              class="aktivitas-image"
+            />
+            <h4 class="aktivitas-title">Belajar Menanam Jamur Tiram Bersama Petani Perempuan</h4>
+            <p class="aktivitas-date">07 Oktober 2025</p>
+            <p class="aktivitas-price">Rp235.000</p>
+          </div>
+        </div>
+        <a href="cariAktivitas.html" class="btn aktivitas-btn">Lihat Aktivitas Lain</a>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-left">
+        <h2>TapakAsa</h2>
+        <p>
+          <strong>TapakAsa</strong> adalah platform yang menghubungkan para
+          relawan <br />
+          dengan organisasi atau komunitas sosial
+        </p>
+        <p>
+          <strong>Wujudkan niat mulia menjadi tindakan nyata hari ini.</strong>
+        </p>
+        <p>
+          <strong>Volunteer Hub Yogyakarta</strong><br />
+          Jl. Sudirman V No.60 <br />
+          Yoyakarta 12160
+        </p>
+        <p>+62 811 9777 140</p>
+        <div class="sosmed-icons">
+          <a href="#" class="social-icon"
+            ><img src="assets/icons/facebook.svg" alt="facebook"
+          /></a>
+          <a href="#" class="social-icon"><img src="assets/icons/whatsapp.svg" alt="whatsapp"></a>
+          <a href="#" class="social-icon"><img src="assets/icons/tiktok.svg" alt="tiktok"></a>
+          <a href="#" class="social-icon"><img src="assets/icons/youtube.svg" alt="youtube"></a>
+          <a href="#" class="social-icon"><img src="assets/icons/instagram.svg" alt="instagram"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-right">
+        <h3>Tentang TapakAsa</h3>
+        <ul>
+          <li><a href="#">Bantu Sekarang</a></li>
+          <li><a href="#">Kesempatan Karir</a></li>
+          <li><a href="#">Hubungi Kami</a></li>
+          <li><a href="#">Kemitraan CSR</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

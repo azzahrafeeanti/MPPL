@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <title>Cari Aktivitas - TapakAsa</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Sriracha&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/cariAktivitas.css" />
+  </head>
+
+  <body>
+    <div class="page-wrapper">
+      <main>
+        <div class="event-navbar">
+          <button id="btnAktif" class="event-tab active" onclick="showAktif()">Event Aktif</button
+          ><button id="btnLalu" class="event-tab" onclick="showLalu()">Event Lalu</button>
+        </div>
+        <div class="search-sort-section">
+          <h2 class="section-title">Cari Aktivitas</h2>
+          <div class="sort-dropdown">
+            <label for="sort-select">Urutkan:</label
+            ><select id="sort-select">
+              <option value="">Waktu Mulai (Terdekat)</option>
+              <option value="">Waktu Mulai (Terjauh)</option>
+              <option value="">Nama Event (A-Z)</option>
+              <option value="">Nama Event (Z-A)</option>
+            </select>
+          </div>
+        </div>
+        <section id="eventAktif" class="activity aktivitas-cards">
+          <article class="aktivitas-card">
+            <a href="PesanEvent.html" class="card-link"></a>
+            <img
+              src="assets/img/cariAktivitas.png"
+              alt="Event 1"
+              class="aktivitas-image"
+            />
+            <div class="aktivitas-content">
+              <h2 class="aktivitas-title" title="event1">
+                <a href="PesanEvent.html" class="card-link"
+                  >Belajar Menanam Jamur Tiram Bersama Kelompok Petani
+                  Perempuan</a
+                >
+              </h2>
+              <p class="aktivitas-date">12 Juni 2025</p>
+              <p class="aktivitas-price">Rp125.000</p>
+              <p class="aktivitas-organizer">Volunteer By TapakAsa</p>
+            </div>
+          </article>
+          <article class="aktivitas-card">
+            <img
+              src="assets/img/cariAktivitas.png"
+              alt="Event 1"
+              class="aktivitas-image"
+            />
+            <div class="aktivitas-content">
+              <h2 class="aktivitas-title" title="event1">
+                Belajar Menanam Jamur Tiram Bersama Kelompok Petani Perempuan
+              </h2>
+              <p class="aktivitas-date">12 Juni 2025</p>
+              <p class="aktivitas-price">Rp125.000</p>
+              <p class="aktivitas-organizer">Volunteer By TapakAsa</p>
+            </div>
+          </article>
+        </section>
+
+        <section id="eventLalu" class="activity aktivitas-cards" style="display: none;">
+            <article class="aktivitas-card">
+            <img
+              src="assets/img/cariAktivitas.png"
+              alt="Event 1"
+              class="aktivitas-image"
+            />
+            <div class="aktivitas-content">
+              <h2 class="aktivitas-title" title="event1">
+                Belajar Menanam Jamur Tiram Bersama Kelompok Petani Perempuan
+              </h2>
+              <p class="aktivitas-date">12 Juni 2025</p>
+              <p class="aktivitas-price">Rp125.000</p>
+              <p class="aktivitas-organizer">Volunteer By TapakAsa</p>
+            </div>
+        </section>
+      </main>
+    </div>
+
+    <!-- footer section -->
+    <footer class="footer">
+      <div class="footer-left">
+        <h2>TapakAsa</h2>
+        <p>
+          <strong>TapakAsa</strong> adalah platform yang menghubungkan para
+          relawan <br />
+          dengan organisasi atau komunitas sosial
+        </p>
+        <p>
+          <strong>Wujudkan niat mulia menjadi tindakan nyata hari ini.</strong>
+        </p>
+        <p>
+          <strong>Volunteer Hub Yogyakarta</strong><br />
+          Jl. Sudirman V No.60 <br />
+          Yoyakarta 12160
+        </p>
+        <p>+62 811 9777 140</p>
+        <div class="sosmed-icons">
+          <a href="#" class="social-icon"
+            ><img src="assets/icons/facebook.svg" alt="facebook"
+          /></a>
+          <a href="#" class="social-icon"><img src="assets/icons/whatsapp.svg" alt="whatsapp"></a>
+          <a href="#" class="social-icon"><img src="assets/icons/tiktok.svg" alt="tiktok"></a>
+          <a href="#" class="social-icon"><img src="assets/icons/youtube.svg" alt="youtube"></a>
+          <a href="#" class="social-icon"><img src="assets/icons/instagram.svg" alt="instagram"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-right">
+        <h3>Tentang TapakAsa</h3>
+        <ul>
+          <li><a href="#">Bantu Sekarang</a></li>
+          <li><a href="#">Kesempatan Karir</a></li>
+          <li><a href="#">Hubungi Kami</a></li>
+          <li><a href="#">Kemitraan CSR</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        function showAktif() {
+            document.getElementById("eventAktif").style.display = "grid";
+            document.getElementById("eventLalu").style.display = "none";
+            document.getElementById("btnAktif").classList.add("active");
+            document.getElementById("btnLalu").classList.remove("active");
+        }
+
+        function showLalu() {
+            document.getElementById("eventAktif").style.display = "none";
+            document.getElementById("eventLalu").style.display = "grid";
+            document.getElementById("btnAktif").classList.remove("active");
+            document.getElementById("btnLalu").classList.add("active");
+        }
+    </script>
+  </body>
+</html>
