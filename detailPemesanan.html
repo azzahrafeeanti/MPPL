@@ -238,12 +238,12 @@
                 <span>E-Wallet</span>
                 <span class="arrow">⌄</span>
               </button>
-              <div class="payment-options">
-                <img src="assets/img/GoPay.png" alt="gopay" />
-                <img src="assets/img/shopeepay.png" alt="ShopeePay" />
-                <img src="assets/img/dana.png" alt="Dana" />
-                <img src="assets/img/link.png" alt="LinkAja" />
-                <img src="assets/img/ovo.png" alt="OVO" />
+              <div class="payment-options ewallet">
+                <img src="assets/img/GoPay.png" alt="gopay" onclick="showPaymentInfo('gopay')"/>
+                <img src="assets/img/shopeepay.png" alt="ShopeePay" onclick="showPaymentInfo('shopeepay')" />
+                <img src="assets/img/dana.png" alt="Dana" onclick="showPaymentInfo('dana')"/>
+                <img src="assets/img/link.png" alt="LinkAja" onclick="showPaymentInfo('linkaja')"/>
+                <img src="assets/img/ovo.png" alt="OVO" onclick="showPaymentInfo('ovo')"/>
               </div>
             </div>
 
@@ -253,11 +253,11 @@
                 <span class="arrow">⌄</span>
               </button>
               <div class="payment-options">
-                <img src="assets/img/bri.png" alt="BRI" />
-                <img src="assets/img/bni.png" alt="BNI" />
-                <img src="assets/img/mandiri.png" alt="Mandiri" />
-                <img src="assets/img/bsi.png" alt="BSI" />
-                <img src="assets/img/cimb.png" alt="CIMB" />
+                <img src="assets/img/bri.png" alt="BRI" onclick="showPaymentInfo('bri')"/>
+                <img src="assets/img/bni.png" alt="BNI" onclick="showPaymentInfo('bni')"/>
+                <img src="assets/img/mandiri.png" alt="Mandiri" onclick="showPaymentInfo('mandiri')"/>
+                <img src="assets/img/bsi.png" alt="BSI" onclick="showPaymentInfo('bsi')"/>
+                <img src="assets/img/cimb.png" alt="CIMB" onclick="showPaymentInfo('cimb')"/>
               </div>
             </div>
 
@@ -267,9 +267,11 @@
                 <span class="arrow">⌄</span>
               </button>
               <div class="payment-options">
-                <img src="assets/img/qris.png" alt="qris" />
+                <img src="assets/img/qris.png" alt="qris" onclick="showPaymentInfo('qris')"/>
               </div>
             </div>
+
+            
           </div>
         </section>
 
@@ -293,6 +295,9 @@
               Pilih mode pembayaran terlabih dahulu untuk <br />menggunakan kode
               promo
             </p>
+
+            <!-- detail payment-->
+            <div id="payment-info" class="payment-info hidden"></div>
 
             <div class="price-details">
               <h3>Detail Harga</h3>
@@ -323,6 +328,8 @@
               <button type="submit" class="btn-pay">Beli Tiket</button>
             </form>
           </div>
+
+          
         </aside>
       </main>
     </div>
@@ -407,6 +414,66 @@
       // Mulai countdown
       updateCountdown();
       let timer = setInterval(updateCountdown, 1000);
+
+      // PEMBYARAN
+      const paymentInfo = document.getElementById("payment-info");
+
+      // Daftar metode & nomor/QR
+      const paymentDetails = {
+        gopay: { img: "assets/img/GoPay.png", nomor: "0823-5689-9654" },
+        shopeepay: { img: "assets/img/shopeepay.png", nomor: "0812-3456-7890" },
+        dana: { img: "assets/img/dana.png", nomor: "0813-9876-5432" },
+        linkaja: { img: "assets/img/link.png", nomor: "0811-2233-4455" },
+        ovo: { img: "assets/img/ovo.png", nomor: "0819-3344-1122" },
+        bri: { img: "assets/img/bri.png", nomor: "1234567890" },
+        bni: { img: "assets/img/bni.png", nomor: "2345678901" },
+        mandiri: { img: "assets/img/mandiri.png", nomor: "3456789012" },
+        bsi: { img: "assets/img/bsi.png", nomor: "4567890123" },
+        cimb: { img: "assets/img/cimb.png", nomor: "5678901234" },
+        qris: { img: "assets/img/qris.png", nomor: null } // QRIS berupa gambar saja
+      };
+
+      // Fungsi saat klik metode
+      function showPaymentInfo(method) {
+        const data = paymentDetails[method];
+        if (!data) return;
+
+        const nomorHtml = data.nomor
+          ? `<span class="payment-number">${data.nomor}</span>`
+          : ""; // kalau QRIS kosong
+
+        const nomorLabel = data.nomor ? `<span class="payment-label">Nomor Tujuan:</span>` : "";
+
+        const html = `
+          <div class="payment-method-row">
+            <img src="${data.img}" alt="${method}" class="method-icon" />
+            <div class="payment-detail-text">
+              ${nomorLabel}
+              ${nomorHtml}
+            </div>
+          </div>
+          <div class="upload-proof">
+            <label for="proof-upload">Bukti Pembayaran</label>
+            <input type="file" id="proof-upload" />
+          </div>
+        `;
+        paymentInfo.innerHTML = html;
+        paymentInfo.classList.remove("hidden");
+      }
+
+
+
+
+      // payment card
+      function toggleDropdown(button) {
+        const options = button.nextElementSibling;
+        options.classList.toggle('hidden');
+
+        // Putar ikon panah
+        const arrow = button.querySelector('.arrow');
+        arrow.textContent = options.classList.contains('hidden') ? '⌄' : '⌃';
+    }
+
     </script>
   </body>
 </html>

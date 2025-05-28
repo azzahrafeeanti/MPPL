@@ -8,265 +8,48 @@ body {
   font-family: "Poppins", sans-serif;
   background-color: #ffffff;
   color: #333;
-  padding-top: 80px;
 }
 
-header {
-  background: #d9efff;
-  padding: 10px 0;
+.header {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin: 24px 0 12px 24px;
+}
+
+.back-button {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
+  top: 24px;
+  left: 24px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   z-index: 1000;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.back-button img {
+  width: 35px;
+  height: 35px;
 }
 
-.logo {
-  font-family: "Sriracha", cursive;
-  font-size: 2.5rem;
-  font-weight: normal;
-  color: #213943;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-}
-
-nav ul li {
-  margin-left: 25px;
-}
-
-nav ul li a {
-  color: white;
-  text-decoration: none;
+.section-title {
+  font-size: 22px;
   font-weight: 600;
-  font-size: 1rem;
-  transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-  color: #ffdd57;
-}
-
-.menu-toggle {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-}
-
-.menu-toggle span {
-  height: 3px;
-  width: 25px;
-  background: white;
-  margin-bottom: 5px;
-  border-radius: 2px;
-}
-
-.nav-menu {
-  list-style: none;
-  display: flex;
-  gap: 25px;
-  margin: 0;
-  padding: 0;
-  align-items: center;
-}
-
-.nav-menu li a {
   color: #213943;
-  text-decoration: none;
-  font-weight: 400;
-  font-size: 18px;
   font-family: "poppins", sans-serif;
-  transition: color 0.3s ease;
-}
-
-.nav-menu li a:hover {
-  color: #66c0ff;
-}
-
-/* Profile */
-.profile {
-  position: relative;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  cursor: pointer;
-  font-weight: 600;
-  color: #333;
-}
-
-.profile-pic {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-.dropdown-menu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  margin-top: 10px;
-  background-color: #fff;
-  border-radius: 5px;
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
-  display: none;
-  flex-direction: column;
-  min-width: 160px;
-  padding: 10px 0;
-  z-index: 999;
-}
-
-.dropdown-menu a {
-  padding: 10px 20px;
-  text-decoration: none;
-  color: #213943;
-  font-weight: 500;
-  display: block;
-  transition: background-color 0.2s ease;
-  border-bottom: 1px solid #e0e0e0;
-}
-
-.dropdown-menu a:last-child {
-  border-bottom: none;
-}
-
-.dropdown-menu a:hover {
-  background-color: #f2f2f2;
-}
-
-/* Buat profile relative supaya dropdown posisi absolut bisa mengikutinya */
-.profile {
-  position: relative;
-  cursor: pointer;
-}
-
-/* Sidebar overlay */
-.sidebar {
-  position: fixed;
-  top: 0;
-  right: -100%;
-  width: 320px;
-  height: 100%;
-  background: #fff;
-  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
-  padding: 30px 20px;
-  z-index: 1500;
-  transition: right 0.3s ease-in-out;
-  overflow-y: auto;
-}
-
-/* Show sidebar */
-.sidebar.active {
-  right: 0;
-}
-
-/* Close button */
-.close-btn {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  background: none;
-  font-size: 24px;
-  border: none;
-  cursor: pointer;
-}
-
-/* Sidebar content */
-.sidebar-header h2 {
-  font-size: 20px;
-  margin-bottom: 5px;
-  color: #213943;
-}
-
-.sidebar-header p {
-  font-size: 14px;
-  color: #666;
-  margin-bottom: 20px;
-}
-
-.sidebar-auth {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 20px;
-}
-
-.outline-btn {
-  flex: 1;
-  border: 2px solid #66c0ff;
-  background: transparent;
-  color: #66c0ff;
-  padding: 10px 15px;
-  border-radius: 8px;
-  text-align: center;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.fill-btn {
-  flex: 1;
-  background: #66c0ff;
-  color: white;
-  padding: 10px 15px;
-  border-radius: 8px;
-  text-align: center;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.sidebar-menu {
-  list-style: none;
-  padding: 0;
-}
-
-.sidebar-menu li {
-  margin-bottom: 15px;
-}
-
-.sidebar-menu li a {
-  text-decoration: none;
-  color: #213943;
-  font-weight: 500;
-}
-
-.menu-toggle i,
-.close-btn i {
-  font-size: 24px;
-  color: #213943;
-}
-
-.menu-toggle {
-  display: none; /* default disembunyikan */
-  flex-direction: column;
-  cursor: pointer;
-  font-size: 24px;
-}
-
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: flex;
-  }
-
-  nav {
-    display: none;
-  }
+  margin-left: 80px;
+  margin-top: 0; /* beri jarak agar tidak ketimpa back-button */
 }
 
 /* Main content */
+
 .main-content {
+  margin-top: 5px;
   display: flex;
   gap: 24px;
-  padding: 60px 0;
+  padding: 30px 0;
 }
 
 .left-column,
