@@ -10,14 +10,14 @@ Kami percaya bahwa kebaikan yang terorganisir akan menjangkau lebih jauh. Karena
 
 ### Deskripsi dan Panduan Kegiatan  
 Setiap kegiatan dirancang dengan informasi yang lengkap dan narasi yang jelas.  
-Panduan pelaksanaan disediakan agar setiap relawan datang dengan pemahaman—bukan hanya niat.
+Panduan pelaksanaan disediakan agar setiap relawan datang dengan pemahaman bukan hanya niat.
 
 ### Jadwal Kegiatan  
 Waktu pelaksanaan disampaikan secara terbuka dan teratur.  
 Kegiatan bisa dipilih dan direncanakan sesuai ritme hidup dan semangat yang ingin dibawa.
 
 ### Pendaftaran dan Reservasi Tiket  
-Semua kegiatan dikelola melalui sistem tiket—baik berbayar, bayar sukarela, maupun gratis.  
+Semua kegiatan dikelola melalui sistem tiket baik berbayar, bayar sukarela, maupun gratis.  
 Dengan ini, proses registrasi menjadi lebih tertib dan terdata, memungkinkan pengalaman yang rapi bagi penyelenggara dan peserta.
 
 ### Akun Relawan  
