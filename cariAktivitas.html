@@ -21,21 +21,76 @@
   </head>
 
   <body>
+    <header>
+      <!-- navbar section -->
+      <div class="container navbar">
+        <h1 class="logo">TapakAsa</h1>
+        <nav>
+          <ul class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="cariAktivitas.html">Cari Event</a></li>
+            <li><a href="AboutUs.html">About  Us</a></li>
+          </ul>
+        </nav>
+        <div class="profile" id="profile">
+          <img
+            src="assets/icons/User.svg"
+            alt="User Profile"
+            class="profile-pic"
+          />
+          <span class="profile-name">User</span>
+
+          <div class="dropdown-menu" id="dropdownMenu">
+            <a href="#">Edit Profil</a>
+            <a href="tiketSaya.html">Riwayat Tiket</a>
+            <a href="index.html">Log Out</a>
+          </div>
+        </div>
+        <div class="menu-toggle" id="menu-toggle">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+    </header>
+
+    <!-- Sidebar Menu -->
+    <div class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <button class="close-btn" id="close-sidebar">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <ul class="sidebar-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cariAktivitas.html">Cari Event</a></li>
+        <li><a href="AboutUs.html">About Us</a></li>
+        <li class="sidebar-profile">
+          <span id="sidebarProfileToggle">Profile ▾</span>
+          <ul class="sidebar-profile-dropdown">
+            <li><a href="#">Edit Profil</a></li>
+            <li><a href="tiketSaya.html">Riwayat Tiket</a></li>
+            <li><a href="index.html">Log Out</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
     <div class="page-wrapper">
       <main>
-        <div class="event-navbar">
-          <button id="btnAktif" class="event-tab active" onclick="showAktif()">Event Aktif</button
-          ><button id="btnLalu" class="event-tab" onclick="showLalu()">Event Lalu</button>
-        </div>
         <div class="search-sort-section">
-          <h2 class="section-title">Cari Aktivitas</h2>
+          <div class="search-left">
+            <h2 class="section-title">Cari Event</h2>
+
+            <div class="search-bar">
+              <input type="text" placeholder="Search" />
+              <button type="submit"><i class="fa fa-search"></i></button>
+            </div>
+          </div>
+
           <div class="sort-dropdown">
             <label for="sort-select">Urutkan:</label
             ><select id="sort-select">
-              <option value="">Waktu Mulai (Terdekat)</option>
-              <option value="">Waktu Mulai (Terjauh)</option>
-              <option value="">Nama Event (A-Z)</option>
-              <option value="">Nama Event (Z-A)</option>
+              <option value="">Event Aktif</option>
+              <option value="">Event Lalu</option>
             </select>
           </div>
         </div>
@@ -136,21 +191,9 @@
       </div>
     </footer>
 
-    <script src="js/bootstrap.min.js"></script>
+    <script src="js/cariAktivitas.js"></script>
     <script>
-        function showAktif() {
-            document.getElementById("eventAktif").style.display = "grid";
-            document.getElementById("eventLalu").style.display = "none";
-            document.getElementById("btnAktif").classList.add("active");
-            document.getElementById("btnLalu").classList.remove("active");
-        }
-
-        function showLalu() {
-            document.getElementById("eventAktif").style.display = "none";
-            document.getElementById("eventLalu").style.display = "grid";
-            document.getElementById("btnAktif").classList.remove("active");
-            document.getElementById("btnLalu").classList.add("active");
-        }
+       
     </script>
   </body>
 </html>
