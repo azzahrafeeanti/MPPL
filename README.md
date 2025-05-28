@@ -1,32 +1,40 @@
-# TapakAsa  
-*Platform Relawan Digital untuk Aksi Nyata di Kota-Kota Indonesia*
+# TapakAsa
 
-*TapakAsa* adalah platform web yang mempertemukan masyarakat dengan berbagai kegiatan sosial di seluruh penjuru Indonesia. Melalui TapakAsa, siapa pun dapat mendaftar menjadi relawan, mendukung kegiatan melalui donasi wajib, dan berkontribusi langsung dalam gerakan sosial. Platform ini hadir untuk memperkuat semangat gotong royong dan memperluas akses terhadap aksi nyata secara digital dan terorganisir.
+**TapakAsa** adalah platform volunteering yang mempertemukan individu, komunitas, dan perusahaan dengan berbagai kegiatan sosial dari seluruh Indonesia. Melalui satu ruang digital yang tertata, kami memudahkan siapa pun untuk menemukan peran, mendaftar sebagai relawan, dan terlibat langsung dalam aksi nyata yang berdampak.
+
+Kami percaya bahwa kebaikan yang terorganisir akan menjangkau lebih jauh. Karena itu, setiap kegiatan di TapakAsa dirancang agar partisipasi menjadi pengalaman yang mudah, jelas, dan bermakna. Di sinilah langkah kecil punya tempat, dan setiap kontribusi tumbuh menjadi harapan bersama.
 
 ---
 
-## Fitur Unggulan
+## Fitur-Fitur TapakAsa
 
-*Deskripsi dan Panduan Kegiatan*  
-Setiap kegiatan dilengkapi informasi lengkap beserta panduan pelaksanaan agar peserta memahami alur dan peran mereka dalam kegiatan tersebut.
+### Deskripsi dan Panduan Kegiatan  
+Setiap kegiatan dirancang dengan informasi yang lengkap dan narasi yang jelas.  
+Panduan pelaksanaan disediakan agar setiap relawan datang dengan pemahaman—bukan hanya niat.
 
-*Jadwal Kegiatan*  
-Informasi tanggal dan waktu kegiatan disajikan dengan jelas untuk mempermudah perencanaan relawan.
+### Jadwal Kegiatan  
+Waktu pelaksanaan disampaikan secara terbuka dan teratur.  
+Kegiatan bisa dipilih dan direncanakan sesuai ritme hidup dan semangat yang ingin dibawa.
 
-*Pendaftaran dan Reservasi Tiket*  
-Sistem reservasi digunakan untuk kegiatan dengan kuota terbatas. Pendaftaran hanya dianggap sah setelah menyelesaikan donasi dan/atau membeli tiket.
+### Pendaftaran dan Reservasi Tiket  
+Semua kegiatan dikelola melalui sistem tiket—baik berbayar, bayar sukarela, maupun gratis.  
+Dengan ini, proses registrasi menjadi lebih tertib dan terdata, memungkinkan pengalaman yang rapi bagi penyelenggara dan peserta.
 
-*Akun Relawan*  
-Relawan diwajibkan memiliki akun untuk menyimpan riwayat event, melihat tiket, dan menerima notifikasi penting seputar kegiatan.
+### Akun Relawan  
+Akun relawan menjadi rumah bagi setiap jejak kebaikan yang kamu lakukan.  
+Di dalamnya tersimpan riwayat kegiatan dan akses tiket, membentuk perjalanan sosialmu sendiri.
 
-*Buat Event*                                                                                                                                                                  
-User dapat membuat dan mengelola event secara mandiri dengan persetujuan admin pusat
+### Kontak Kami  
+Kami membuka ruang kolaborasi, tanya jawab, maupun peluang kerja sama.  
+Hubungi tim TapakAsa melalui halaman resmi *Kontak Kami* atau saluran media sosial yang tersedia.
 
-*Kontak Kami*  
-Setiap kegiatan dilengkapi informasi kontak untuk mempermudah komunikasi langsung antara peserta dan panitia. Relawan juga dapat menghubungi kami melalui media sosial yang terintegrasi di platform.
+### CSR  
+Bagi perusahaan, TapakAsa menjadi mitra untuk membangun dampak sosial yang lebih luas.  
+Kami mendukung program CSR melalui kegiatan sosial yang dapat disesuaikan, dari partisipasi karyawan hingga sponsorship berkelanjutan.
 
-*CSR*                                                                                                                                                                       
-Peluang kerja sama untuk sponsorship, program sosial, hingga kolaborasi komunitas yang berdampak dan berkelanjutan.
+---
+
+> TapakAsa: Menjejak bersama, menyemai harapan 
 
 ---
 
