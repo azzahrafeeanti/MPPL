@@ -1,4 +1,3 @@
-/* Base styles */
 * {
   margin: 0;
   padding: 0;
@@ -41,8 +40,6 @@ body {
 }
 
 /* Card style */
-
-/* Back button */
 .back-button {
   display: inline-block;
   margin-bottom: 0;
@@ -68,16 +65,6 @@ body {
 }
 
 /* Detail Pemesanan */
-/* .form-pemesan h2,
-.metode-pembayaran h2 {
-  font-weight: 600;
-  font-size: 1.5rem;
-  margin: 0 0 15px 0;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #cbd6e2;
-  color: #0a3d62;
-} */
-
 .card {
   background-color: #fff;
   padding: 24px;
@@ -88,8 +75,10 @@ body {
 
 .event-info {
   display: flex;
-  gap: 20px;
-  align-items: stretch;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 16px;
 }
 
 .event-info img {
@@ -108,6 +97,9 @@ body {
   gap: 10px;
   max-height: 140px; /* Sesuai tinggi gambar */
   overflow: hidden;
+  min-width: 0; /* penting agar teks bisa wrap dan tidak overflow */
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .event-text h2 {
@@ -253,8 +245,8 @@ body {
 .form-pemesan input[type="email"],
 .form-pemesan input[type="date"],
 .form-pemesan select {
-  width: 100%; /* Ubah jadi 100% */
-  box-sizing: border-box; /* Pastikan padding + border dihitung dalam lebar total */
+  width: 100%;
+  box-sizing: border-box;
   padding: 10px 14px;
   margin-bottom: 15px;
   border: 1.5px solid #cbd6e2;
@@ -279,7 +271,6 @@ body {
   margin-left: 2px;
 }
 
-/* Radio groups */
 .radio-group {
   margin-bottom: 15px;
   border: none;
@@ -319,7 +310,7 @@ body {
   margin-bottom: 20px;
 }
 
-/* Metode Pembayaran - Accordion */
+/* Metode Pembayaran */
 .payment-section {
   border-top: 5px solid #e1e7ee;
   padding-top: 20px;
@@ -349,7 +340,7 @@ body {
   padding: 14px 16px;
   font-size: 1rem;
   font-weight: bold;
-  background-color: transparent;
+  background-color: #eef3f6;
   border: none;
   display: flex;
   justify-content: space-between;
@@ -375,18 +366,25 @@ body {
 }
 
 .payment-options img {
-  width: 80px;
-  height: 40px;
+  width: 100px; /* atau 120px */
+  height: 60px; /* atau 70px */
   object-fit: contain;
   background: #fff;
   border: 1px solid #ddd;
   border-radius: 8px;
-  padding: 6px 10px;
+  padding: 10px 14px; /* tambahkan padding agar isi terlihat lega */
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.05);
   cursor: pointer;
+  transition: transform 0.2s ease;
 }
 
-/* Right column timer */
+.payment-options img:hover {
+  transform: scale(1.05);
+  border-color: #0a3d62;
+  background-color: #f0f6ff;
+}
+
+/* Right column */
 .timer {
   background: #ffdb4d;
   color: #4a4a4a;
@@ -411,7 +409,6 @@ body {
   padding-left: 12px;
 }
 
-/* Payment summary */
 .payment-summary .promo-code {
   display: flex;
   gap: 10px;
@@ -458,57 +455,153 @@ body {
   margin-top: 0;
 }
 
-.payment-options img {
-  width: 60px;
-  height: 40px;
-  object-fit: contain;
-  cursor: pointer;
-  margin: 5px;
-  border: 2px solid transparent;
-  border-radius: 10px;
-  transition: all 0.3s ease;
-}
-
-.payment-options img:hover,
-.payment-options img.selected {
-  border-color: #0a3d62;
-  background-color: #f0f6ff;
-}
-
 .payment-info {
-  margin-top: 15px;
-  padding: 10px;
-  background-color: #f8faff;
-  border: 1px solid #cbd6e2;
-  border-radius: 10px;
-}
-
-.payment-info .payment-method {
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  gap: 15px;
 }
 
-.payment-info .payment-label {
+/* hidden metode bayar */
+.payment-method-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  border: 1px solid #d9d9d9;
+  border-radius: 15px;
+  padding: 12px 16px;
+  background-color: #fff;
+  font-family: "Poppins", sans-serif;
+  width: 364px;
+  height: 60px;
+}
+
+.payment-method-box img {
+  height: 40px;
+  object-fit: contain;
+}
+
+.btn-qris {
+  background-color: #0a3d62;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+.btn-qris:hover {
+  background-color: #064173;
+}
+
+/* Bukti pembayaran */
+.upload-proof {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 16px;
+  margin-bottom: 20px;
+  border: 1px solid #d9d9d9;
+  border-radius: 15px;
+  padding: 12px 16px;
+  background-color: #fff;
+  font-family: "Poppins", sans-serif;
+  width: 440px;
+  height: 60px;
+}
+
+.upload-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: space-between;
+}
+
+.upload-row label {
+  color: #585858;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.upload-row .custom-file {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.custom-file button {
+  background-color: #ababab;
+  color: #fff;
+  border: 1px solid #cbd6e2;
+  border-radius: 15px;
+  padding: 6px 12px;
+  cursor: pointer;
   font-weight: 600;
-  color: #34495e;
-  margin-bottom: 5px;
+  font-family: Poppins;
+  font-size: 15px;
+  width: 128px;
+  height: 40px;
 }
 
-.payment-info .payment-number {
-  font-size: 1.1rem;
-  color: #0a3d62;
+.custom-file button:hover {
+  background-color: #a0b9d9;
+  border-color: #cbd6e2;
 }
 
-.payment-info .qris-img {
-  width: 100%;
-  max-width: 200px;
-  display: block;
-  margin: auto;
+.custom-file span {
+  font-size: 14px;
+  color: #666;
 }
 
 .hidden {
   display: none;
+}
+
+.modal-qris {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-qris .modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 20px 30px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  position: relative;
+}
+
+.modal-qris img {
+  max-width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-top: 12px;
+}
+
+.modal-qris .close {
+  position: absolute;
+  top: 12px;
+  right: 20px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
 }
 
 /* Price details */
@@ -547,7 +640,6 @@ body {
   padding: 10px 0;
 }
 
-/* Agreement form */
 .agreement-form {
   display: flex;
   flex-direction: column;
@@ -582,7 +674,6 @@ body {
   font-weight: 500;
 }
 
-/* Pay button */
 .btn-pay {
   background: #66c0ff;
   border: none;
@@ -592,7 +683,6 @@ body {
   font-weight: 700;
   color: white;
   cursor: pointer;
-  box-shadow: 0 6px 12px rgba(102, 192, 255, 0.6);
   transition: background 0.3s ease;
 }
 
@@ -600,8 +690,127 @@ body {
   background: #4a9de8;
 }
 
-/* Footer styles */
-/* Footer styles */
+/* popup kalo beli tiket */
+.modal-success {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-success .modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 20px 30px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  position: relative;
+}
+
+.modal-success .close {
+  position: absolute;
+  top: 12px;
+  right: 20px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+}
+
+.btn-share,
+.btn-history {
+  display: block;
+  margin: 16px auto 0;
+  padding: 10px 24px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-family: Poppins;
+  text-align: center;
+  text-decoration: none;
+}
+
+.btn-share {
+  background-color: #66c0ff;
+  color: white;
+  border: none;
+  width: 160px;
+}
+
+.btn-history {
+  background-color: #74c1ff;
+  color: white;
+  width: 100%;
+  margin-top: 12px;
+}
+
+.btn-share:hover,
+.btn-history:hover {
+  background-color: #4a9de8;
+}
+
+.modal-share {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-share .share-content {
+  background-color: #fff;
+  margin: 20% auto;
+  padding: 20px 24px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+}
+
+.modal-share input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-family: Poppins;
+}
+
+.modal-share button {
+  padding: 10px 18px;
+  background-color: #f1f1f1;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-family: Poppins;
+  cursor: pointer;
+}
+
+.modal-share button:hover {
+  background-color: #e0e0e0;
+}
+
+.modal-share .close {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #555;
+  cursor: pointer;
+}
+
+/* Footer */
 .footer {
   display: flex;
   justify-content: space-between;
@@ -612,8 +821,7 @@ body {
   gap: 40px;
 }
 
-.footer-left,
-.footer-right {
+.footer-left {
   flex: 1 1 300px;
   min-width: 280px;
 }
@@ -656,43 +864,55 @@ body {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-.footer-right h3 {
-  font-weight: 700;
-  font-size: 1.2rem;
-  color: #213943;
-  margin-bottom: 20px;
-}
-
-.footer-right ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.footer-right ul li {
-  margin-bottom: 15px;
-}
-
-.footer-right ul li a {
-  color: #555;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-.footer-right ul li a:hover {
-  color: #66c0ff;
-}
-
 /* Responsive */
-@media (max-width: 900px) {
-  .aktivitas-cards,
-  .blog-cards {
-    grid-template-columns: 1fr;
+@media (max-width: 1024px) {
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 0 24px 30px; /* padding kanan-kiri 24px, bawah 24px */
   }
 
-  .aktivitas-btn {
+  .left-column,
+  .right-column {
     width: 100%;
+    flex: unset;
+  }
+
+  .main-title {
+    padding-left: 24px; /* atau 32px sesuai kebutuhan */
+  }
+
+  .event-info {
+    display: flex;
+    flex-direction: row;
+    gap: 14px;
+    align-items: flex-start;
+  }
+
+  .event-info img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+
+  .event-text {
+    flex: 1;
+    max-width: 100%;
+    overflow-wrap: break-word;
+  }
+
+  .event-text h2 {
+    font-size: 18px;
+  }
+
+  .event-text p {
+    font-size: 15px;
+  }
+
+  .card.detail-pemesanan {
+    padding: 16px;
   }
 
   .footer {
@@ -700,8 +920,47 @@ body {
     padding: 30px 20px;
   }
 
-  .footer-left,
-  .footer-right {
+  .footer-left {
     min-width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .main-content {
+    padding: 0 16px 16px;
+  }
+
+  .left-column,
+  .right-column {
+    width: 100%;
+  }
+
+  .event-info {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .event-info img {
+    width: 140px;
+    height: 140px;
+  }
+
+  .event-text h2 {
+    font-size: 16px;
+  }
+
+  .event-text p {
+    font-size: 14px;
+  }
+
+  .event-text {
+    max-width: 100%;
+    overflow-wrap: break-word;
+  }
+
+  .card.detail-pemesanan {
+    padding: 12px;
   }
 }

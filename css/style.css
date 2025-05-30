@@ -56,41 +56,6 @@ header.scrolled .nav-menu li a.active {
   color: #ffffff;
 }
 
-nav ul {
-  list-style: none;
-  display: flex;
-}
-
-nav ul li {
-  margin-left: 25px;
-}
-
-nav ul li a {
-  color: #213943;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 1rem;
-  transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-  color: #ffdd57;
-}
-
-.menu-toggle {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-}
-
-.menu-toggle span {
-  height: 3px;
-  width: 25px;
-  background: white;
-  margin-bottom: 5px;
-  border-radius: 2px;
-}
-
 .nav-menu {
   list-style: none;
   display: flex;
@@ -173,12 +138,10 @@ nav ul li a:hover {
   overflow-y: auto;
 }
 
-/* Show sidebar */
 .sidebar.active {
   right: 0;
 }
 
-/* Close button */
 .close-btn {
   position: absolute;
   top: 15px;
@@ -189,7 +152,6 @@ nav ul li a:hover {
   cursor: pointer;
 }
 
-/* Sidebar content */
 .sidebar-header h2 {
   font-size: 20px;
   margin-bottom: 5px;
@@ -220,6 +182,11 @@ nav ul li a:hover {
   font-weight: 600;
 }
 
+.outline-btn:hover {
+  background: #66c0ff;
+  color: white;
+}
+
 .fill-btn {
   flex: 1;
   background: #66c0ff;
@@ -229,6 +196,10 @@ nav ul li a:hover {
   text-align: center;
   text-decoration: none;
   font-weight: 600;
+}
+
+.fill-btn:hover {
+  background: #005ea0;
 }
 
 .sidebar-menu {
@@ -246,6 +217,10 @@ nav ul li a:hover {
   font-weight: 500;
 }
 
+.sidebar-menu li a:hover {
+  color: #66c0ff;
+}
+
 .menu-toggle i,
 .close-btn i {
   font-size: 24px;
@@ -253,23 +228,13 @@ nav ul li a:hover {
 }
 
 .menu-toggle {
-  display: none; /* default disembunyikan */
+  display: none;
   flex-direction: column;
   cursor: pointer;
   font-size: 24px;
 }
 
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: flex;
-  }
-
-  nav,
-  .auth-buttons {
-    display: none;
-  }
-}
-
+/* hero section */
 .hero {
   position: relative;
   background: url("../assets/img/landPage.png") no-repeat center center/cover;
@@ -327,7 +292,7 @@ nav ul li a:hover {
 }
 
 .stats-cards {
-  width: 700px;
+  width: 650px;
   margin: -50px auto 60px;
   display: flex;
   justify-content: space-around;
@@ -365,48 +330,6 @@ nav ul li a:hover {
   font-size: 19px;
   font-weight: 600;
   color: #555;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .stats-cards {
-    flex-direction: column;
-    margin: -60px 20px 40px;
-  }
-
-  .card {
-    margin-bottom: 20px;
-  }
-}
-
-@media (max-width: 600px) {
-  .container {
-    flex-wrap: wrap;
-  }
-
-  nav {
-    width: 100%;
-  }
-
-  nav ul {
-    flex-direction: column;
-    display: none;
-    width: 100%;
-    background: #007bff;
-  }
-
-  nav ul.active {
-    display: flex;
-  }
-
-  nav ul li {
-    margin: 15px 0;
-    text-align: center;
-  }
-
-  .menu-toggle {
-    display: flex;
-  }
 }
 
 /* Layanan Section */
@@ -459,11 +382,6 @@ nav ul li a:hover {
   box-shadow: 0 12px 25px rgba(33, 57, 67, 0.15);
 }
 
-.layanan-icon {
-  color: #66c0ff;
-  margin-bottom: 20px;
-}
-
 .layanan-card h3 {
   font-size: 22px;
   font-weight: 500;
@@ -498,14 +416,6 @@ nav ul li a:hover {
 
 .layanan-btn:hover {
   background-color: #4a9de8;
-}
-
-/* Responsive */
-@media (max-width: 900px) {
-  .layanan-cards {
-    flex-direction: column;
-    gap: 20px;
-  }
 }
 
 /* Aktivitas Section */
@@ -670,15 +580,78 @@ nav ul li a:hover {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-/* Responsive */
+/* media query hp*/
+@media (max-width: 768px) {
+  .hero {
+    height: auto;
+    padding: 50px 20px;
+    background-position: center;
+    background-size: cover;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin-left: 0;
+    padding-top: 90px;
+  }
+
+  .hero-content {
+    padding: 0;
+    padding-left: 20px;
+    max-width: 100%;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+    line-height: 1.2;
+  }
+
+  .hero p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .cta-button {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+
+  .stats-cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: -30px auto 40px;
+    width: 90%;
+    padding: 10px;
+  }
+
+  .card {
+    margin-bottom: 0;
+  }
+
+  .aktivitas-btn {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+}
+
+/* media query tab */
 @media (max-width: 900px) {
-  .aktivitas-cards,
-  .blog-cards {
+  .layanan-cards {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .aktivitas-cards {
     grid-template-columns: 1fr;
   }
 
   .aktivitas-btn {
-    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
   }
 
   .footer {
@@ -688,5 +661,49 @@ nav ul li a:hover {
 
   .footer-left {
     min-width: 100%;
+  }
+}
+
+@media (max-width: 1024px) {
+  header {
+    padding: 12px 0;
+  }
+
+  .logo {
+    font-size: 2rem;
+  }
+
+  .hero {
+    height: auto;
+    padding: 60px 20px;
+    background-position: center;
+    background-size: cover;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .hero-content {
+    padding: 0;
+    padding-left: 30px;
+    max-width: 90%;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  nav,
+  .auth-buttons {
+    display: none;
   }
 }

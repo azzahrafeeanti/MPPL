@@ -53,22 +53,21 @@
     </main>
 
     <!-- javascript -->
-    <link rel="stylesheet" href="DaftarAkun.js" />
     <script>
       const signinBtn = document.getElementById("signin-btn");
       const signupBtn = document.getElementById("signup-btn");
 
       signupBtn.addEventListener("click", function (e) {
-        e.preventDefault(); // cegah pindah halaman langsung
+        e.preventDefault();
 
         // ganti class active
         signinBtn.classList.remove("active");
         signupBtn.classList.add("active");
 
-        // delay pindah halaman agar efek kelihatan
+        // delay pindah halaman
         setTimeout(() => {
           window.location.href = "SignUp.html";
-        }, 200); // kasih delay 200ms biar efek aktif kelihatan dulu
+        }, 200);
       });
     </script>
   </body>

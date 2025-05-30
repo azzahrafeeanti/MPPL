@@ -180,20 +180,106 @@ input {
   height: 20px;
 }
 
+/* HP: max-width 768px, gambar disembunyikan, form full width */
 @media (max-width: 768px) {
   .box {
     flex-direction: column;
     height: auto;
+    padding: 20px;
+    width: 90%;
+    max-width: 400px;
+  }
+
+  .inner-box {
+    position: static;
+    transform: none;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
   }
 
   .images {
-    width: 100%;
-    height: 250px;
-    border-radius: 50px 50px 0 0;
+    display: none;
   }
 
   .forms-wrap {
+    position: static;
     width: 100%;
-    padding: 30px;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  label {
+    margin-left: 0;
+    align-self: flex-start;
+    padding-left: 15px;
+  }
+
+  form input {
+    width: 100%;
+    max-width: 320px;
+    padding: 12px 20px;
+    margin: 0 auto 20px;
+    display: block;
+  }
+
+  .account-link {
+    font-size: 10px; /* diperkecil */
+    width: 100%;
+    margin-left: 0;
+    margin-top: -10px;
+    margin-bottom: 15px;
+    color: #666;
+    font-weight: 500;
+    text-align: right;
+    padding-right: 15px;
+    display: block;
+  }
+
+  .account-link a {
+    font-weight: 700;
+    color: #333;
+    text-decoration: none;
+    margin-left: 5px;
+  }
+}
+
+/* Tablet: 769px sampai 1024px, dua kolom, ukuran box diperkecil */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .box {
+    max-width: 820px;
+    height: 600px;
+    border-radius: 35px;
+  }
+
+  .inner-box {
+    width: calc(100% - 3.5rem);
+    height: calc(100% - 3.5rem);
+  }
+
+  .images {
+    width: 50%;
+    border-radius: 35px;
+  }
+
+  .forms-wrap {
+    width: 50%;
+    padding: 35px;
+  }
+
+  label {
+    margin-left: 0;
+    align-self: flex-start;
+    padding-left: 24px; /* biar rata dengan padding form */
+  }
+
+  input {
+    width: 100%;
+    padding: 12px;
+    max-width: 100%;
   }
 }

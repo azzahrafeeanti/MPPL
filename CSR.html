@@ -19,31 +19,56 @@
   <body>
     <header>
       <!-- navbar section -->
-      <div class="header-container">
+      <div class="container navbar">
         <h1 class="logo">TapakAsa</h1>
         <nav>
           <ul class="nav-menu">
             <li><a href="index.html">Home</a></li>
-            <li><a href="#">Cari Event</a></li>
-            <li><a href="cariOrganisasi.html">Cari Organisasi</a></li>
-            <li><a href="#">Buat Event</a></li>
+            <li><a href="cariAktivitas.html">Cari Event</a></li>
+            <li><a href="AboutUs.html">About Us</a></li>
           </ul>
         </nav>
-        <div class="profile">
+        <div class="profile" id="profile">
           <img
             src="assets/icons/User.svg"
             alt="User Profile"
             class="profile-pic"
           />
-          <span class="profile-name">Nama User</span>
+          <span class="profile-name">User</span>
+
+          <div class="dropdown-menu" id="dropdownMenu">
+            <a href="editProfile.html">Edit Profil</a>
+            <a href="tiketSaya.html">Riwayat Tiket</a>
+            <a href="index.html">Log Out</a>
+          </div>
         </div>
         <div class="menu-toggle" id="menu-toggle">
-          <span></span>
-          <span></span>
-          <span></span>
+          <i class="fa-solid fa-bars"></i>
         </div>
       </div>
     </header>
+
+    <!-- Sidebar Menu -->
+    <div class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <button class="close-btn" id="close-sidebar">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <ul class="sidebar-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cariAktivitas.html">Cari Event</a></li>
+        <li><a href="AboutUs.html">About Us</a></li>
+        <li class="sidebar-profile">
+          <span id="sidebarProfileToggle">Profile ▾</span>
+          <ul class="sidebar-profile-dropdown">
+            <li><a href="#">Edit Profil</a></li>
+            <li><a href="tiketSaya.html">Riwayat Tiket</a></li>
+            <li><a href="index.html">Log Out</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
 
     <!-- hero -->
     <section class="hero">
@@ -132,5 +157,7 @@
         </ul>
       </div>
     </footer>
+
+    <script src="js/CSR.js"></script>
   </body>
 </html>

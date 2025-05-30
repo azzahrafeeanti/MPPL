@@ -42,41 +42,6 @@ header {
   line-height: normal;
 }
 
-nav ul {
-  list-style: none;
-  display: flex;
-}
-
-nav ul li {
-  margin-left: 25px;
-}
-
-nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 1rem;
-  transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-  color: #ffdd57;
-}
-
-.menu-toggle {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-}
-
-.menu-toggle span {
-  height: 3px;
-  width: 25px;
-  background: white;
-  margin-bottom: 5px;
-  border-radius: 2px;
-}
-
 .nav-menu {
   list-style: none;
   display: flex;
@@ -105,7 +70,6 @@ nav ul li a:hover {
   border-bottom: 2px solid #1a73e8;
 }
 
-/* Profile */
 .profile {
   position: relative;
   display: flex;
@@ -133,7 +97,7 @@ nav ul li a:hover {
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
   display: none;
   flex-direction: column;
-  min-width: 160px;
+  min-width: 150px;
   padding: 10px 0;
   z-index: 999;
 }
@@ -156,12 +120,6 @@ nav ul li a:hover {
   background-color: #f2f2f2;
 }
 
-/* Buat profile relative supaya dropdown posisi absolut bisa mengikutinya */
-.profile {
-  position: relative;
-  cursor: pointer;
-}
-
 /* Sidebar overlay */
 .sidebar {
   position: fixed;
@@ -177,12 +135,10 @@ nav ul li a:hover {
   overflow-y: auto;
 }
 
-/* Show sidebar */
 .sidebar.active {
   right: 0;
 }
 
-/* Close button */
 .close-btn {
   position: absolute;
   top: 15px;
@@ -193,7 +149,6 @@ nav ul li a:hover {
   cursor: pointer;
 }
 
-/* Sidebar content */
 .sidebar-menu {
   list-style: none;
   padding: 0;
@@ -206,7 +161,11 @@ nav ul li a:hover {
 .sidebar-menu li a {
   text-decoration: none;
   color: #213943;
-  font-weight: bold;
+  font-weight: 500;
+}
+
+.sidebar-menu li a:hover {
+  color: #66c0ff;
 }
 
 .menu-toggle i,
@@ -224,9 +183,13 @@ nav ul li a:hover {
 
 .sidebar-profile {
   position: relative;
-  font-weight: bold;
+  font-weight: 500;
   color: #213943;
   cursor: pointer;
+}
+
+.sidebar-profile:hover {
+  color: #66c0ff;
 }
 
 .sidebar-profile-dropdown {
@@ -243,30 +206,18 @@ nav ul li a:hover {
 .sidebar-profile-dropdown li a {
   text-decoration: none;
   color: #213943;
-  font-weight: 400;
+  font-weight: 300;
+}
+
+.sidebar-profile-dropdown li a:hover {
+  color: #ababab;
 }
 
 .sidebar-profile.active .sidebar-profile-dropdown {
   display: flex;
 }
 
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: flex;
-  }
-
-  nav,
-  .auth-buttons {
-    display: none;
-  }
-}
-
-@media (max-width: 768px) {
-  .profile {
-    display: none;
-  }
-}
-
+/* main */
 .page-wrapper {
   flex: 1;
   display: flex;
@@ -276,10 +227,6 @@ nav ul li a:hover {
 
 main {
   flex: 1 0 auto;
-}
-
-footer.footer {
-  flex-shrink: 0;
 }
 
 .search-sort-section {
@@ -383,31 +330,6 @@ footer.footer {
   box-sizing: border-box;
 }
 
-@media (max-width: 1024px) {
-  .aktivitas-cards {
-    grid-template-columns: repeat(2, 1fr);
-    padding: 0 24px;
-  }
-}
-
-@media (max-width: 600px) {
-  .aktivitas-cards {
-    grid-template-columns: 1fr;
-    padding: 0 16px;
-  }
-}
-
-@media (max-width: 600px) {
-  .search-sort-section {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .sort-dropdown {
-    justify-content: space-between;
-  }
-}
-
 .aktivitas-card {
   background: white;
   border-radius: 12px;
@@ -458,7 +380,7 @@ footer.footer {
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-height: 2.8em; /* approx 2 lines */
+  max-height: 2.8em;
 }
 
 .aktivitas-date {
@@ -488,7 +410,7 @@ footer.footer {
   text-align: center;
 }
 
-/* Footer styles */
+/* Footer */
 .footer {
   display: flex;
   justify-content: space-between;
@@ -499,8 +421,7 @@ footer.footer {
   gap: 40px;
 }
 
-.footer-left,
-.footer-right {
+.footer-left {
   flex: 1 1 300px;
   min-width: 280px;
 }
@@ -543,35 +464,37 @@ footer.footer {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-.footer-right h3 {
-  font-weight: 700;
-  font-size: 1.2rem;
-  color: #213943;
-  margin-bottom: 20px;
+/* media query hp */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  nav,
+  .auth-buttons {
+    display: none;
+  }
+
+  .profile {
+    display: none;
+  }
+
+  .search-sort-section {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .sort-dropdown {
+    justify-content: space-between;
+  }
+
+  .aktivitas-cards {
+    grid-template-columns: 1fr;
+    padding: 0 16px;
+  }
 }
 
-.footer-right ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.footer-right ul li {
-  margin-bottom: 15px;
-}
-
-.footer-right ul li a {
-  color: #555;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-.footer-right ul li a:hover {
-  color: #66c0ff;
-}
-
-/* Responsive */
+/* media query tab */
 @media (max-width: 900px) {
   .aktivitas-cards,
   .blog-cards {
@@ -590,5 +513,57 @@ footer.footer {
   .footer-left,
   .footer-right {
     min-width: 100%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .search-sort-section {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 12px;
+    padding: 0 20px;
+  }
+
+  .search-left {
+    flex: 1;
+    min-width: 200px;
+    max-width: 65%;
+    gap: 6px;
+  }
+
+  .section-title {
+    font-size: 18px;
+    margin-left: 0;
+  }
+
+  .search-bar {
+    width: 100%;
+    max-width: 250px;
+    margin-left: 0;
+    height: 36px;
+  }
+
+  .sort-dropdown {
+    flex-shrink: 0;
+    align-items: flex-start;
+    margin-right: 0;
+    margin-top: 22px; /* sejajarkan vertikal dengan search-bar */
+  }
+
+  .sort-dropdown label {
+    font-size: 14px;
+  }
+
+  .sort-dropdown select {
+    font-size: 14px;
+    width: 180px;
+    padding: 6px 10px;
+  }
+
+  .aktivitas-cards {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 24px;
   }
 }
