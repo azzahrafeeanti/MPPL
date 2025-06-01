@@ -122,3 +122,45 @@ body {
   font-weight: 700;
   margin-top: 35px;
 }
+
+/* media query */
+@media (max-width: 600px) {
+  .tabs {
+    gap: 4px;
+  }
+
+  .tab-button {
+    font-size: 14px;
+    padding: 10px 0;
+  }
+
+  .ticket-card {
+    height: 140px;
+    background-repeat: no-repeat;
+  }
+
+  .ticket-card .text-wrapper {
+    padding: 12px 12px 16px 36px;
+  }
+
+  .ticket-title {
+    font-size: 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .ticket-time {
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .ticket-price {
+    font-size: 15px;
+    margin-top: 20px;
+  }
+}

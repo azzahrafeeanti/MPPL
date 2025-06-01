@@ -95,9 +95,9 @@ body {
   flex-direction: column;
   justify-content: center;
   gap: 10px;
-  max-height: 140px; /* Sesuai tinggi gambar */
+  max-height: 140px;
   overflow: hidden;
-  min-width: 0; /* penting agar teks bisa wrap dan tidak overflow */
+  min-width: 0;
   overflow-wrap: break-word;
   word-break: break-word;
 }
@@ -366,13 +366,13 @@ body {
 }
 
 .payment-options img {
-  width: 100px; /* atau 120px */
-  height: 60px; /* atau 70px */
+  width: 100px;
+  height: 60px;
   object-fit: contain;
   background: #fff;
   border: 1px solid #ddd;
   border-radius: 8px;
-  padding: 10px 14px; /* tambahkan padding agar isi terlihat lega */
+  padding: 10px 14px;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.05);
   cursor: pointer;
   transition: transform 0.2s ease;
@@ -870,7 +870,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 16px;
-    padding: 0 24px 30px; /* padding kanan-kiri 24px, bawah 24px */
+    padding: 0 24px 30px;
   }
 
   .left-column,
@@ -880,7 +880,7 @@ body {
   }
 
   .main-title {
-    padding-left: 24px; /* atau 32px sesuai kebutuhan */
+    padding-left: 24px;
   }
 
   .event-info {
