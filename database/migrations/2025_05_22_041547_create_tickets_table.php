@@ -16,8 +16,6 @@ return new class extends Migration
 
             $table->string('name');
             $table->string('slug');
-            $table->unsignedBigInteger('price');
-            $table->unsignedBigInteger('stock');
             
             $table->softDeletes();
 

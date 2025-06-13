@@ -20,17 +20,17 @@ class Event extends Model
         'date',
         'time',
         'location',
-        'ticket_id'
+        'price',
+        'stock',
+        'photo',
+        'in_stock',
+        'is_active',
+        'ticket_id', // Foreign key to Ticket
     ];
 
-    public function tickets(): HasMany
+    public function ticket(): BelongsTo
     {
-        return $this->hasMany(Ticket::class);
-    }
-
-    public function photos(): HasOne
-    {
-        return $this->hasOne(EventPhoto::class);
+        return $this->belongsTo(Ticket::class);
     }
 
     public function setNameAttribute($value)

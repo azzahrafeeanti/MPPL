@@ -14,23 +14,22 @@ return new class extends Migration
         Schema::create('transactions', function (Blueprint $table) {
             $table->id();
 
-            $table->string('name');
-            $table->string('email');
-            $table->date('date');
-            $table->string('gender');
-            $table->string('NIK');
-            $table->string('proof');
-            $table->string('booking_trx_id');
-
-            $table->boolean('is_paid');
+            $table->string('name')->nullable();
+            $table->string('email')->nullable();
+            $table->date('date')->nullable();
+            $table->string('gender')->nullable();
+            $table->string('NIK')->nullable();
+            $table->string('social_media_account')->nullable();
+            $table->string('agree_handbook')->nullable();
+            $table->string('proof')->nullable();
+            $table->string('booking_trx_id')->nullable();
 
             $table->unsignedBigInteger('quantity');
             $table->unsignedBigInteger('sub_total_amount');
             $table->unsignedBigInteger('grand_total_amount');
-            $table->unsignedBigInteger('discount_amount');
 
-            $table->foreignId('promo_id')->nullable()->constrained()->cascadeOnDelete();
-            $table->foreignId('ticket_id')->constrained()->cascadeOnDelete();
+            $table->foreignId('event_id')->constrained()->cascadeOnDelete();
+            $table->foreignId('user_id')->constrained()->cascadeOnDelete();
             
             $table->softDeletes();
             

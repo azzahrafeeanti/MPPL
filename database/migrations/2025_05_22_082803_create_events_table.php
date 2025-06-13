@@ -20,6 +20,11 @@ return new class extends Migration
             $table->date('date');
             $table->time('time');
             $table->string('location');
+            $table->string('photo');
+            $table->unsignedBigInteger('stock');
+            $table->unsignedBigInteger('price');
+            $table->boolean('in_stock')->default(true);
+            $table->boolean('is_active')->default(true);
 
             $table->foreignId('ticket_id')->constrained()->cascadeOnDelete();
             

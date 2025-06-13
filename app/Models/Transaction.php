@@ -18,15 +18,16 @@ class Transaction extends Model
         'date',
         'gender',
         'NIK',
+        'social_media_account',
+        'agree_handbook',
         'proof',
         'booking_trx_id',
-        'is_paid',
         'quantity',
         'sub_total_amount',
         'grand_total_amount',
         'discount_amount',
-        'promo_id',
-        'ticket_id'
+        'event_id',
+        'user_id'
     ];
 
     public static function generateUniqueTrxId()
@@ -39,15 +40,19 @@ class Transaction extends Model
         return $randomString;
     }
 
+    public function event(): BelongsTo
+    {
+        return $this->belongsTo(Event::class, 'event_id');
+    }
+
     public function promo(): BelongsTo
     {
         return $this->belongsTo(Promo::class, 'promo_id');
     }
 
-    public function ticket(): BelongsTo
+    public function user(): BelongsTo
     {
-        return $this->belongsTo(Ticket::class, 'ticket_id');
+        return $this->belongsTo(User::class, 'user_id');
     }
-    
 
 }

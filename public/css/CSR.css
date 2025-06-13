@@ -1,0 +1,398 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f5f7fa;
+  color: #333;
+  padding-top: 80px;
+}
+
+header {
+  background: #ffffff;
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.logo {
+  font-family: "Sriracha", cursive;
+  font-size: 2.5rem;
+  color: #213943;
+  font-weight: normal;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 25px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #ffdd57;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  height: 3px;
+  width: 25px;
+  background: white;
+  margin-bottom: 5px;
+  border-radius: 2px;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.nav-menu li a {
+  color: #213943;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 18px;
+  font-family: "poppins", sans-serif;
+  transition: color 0.3s ease;
+}
+
+.nav-menu li a:hover {
+  color: #66c0ff;
+}
+
+/* sign in sign up */
+.auth-buttons {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.btn {
+  padding: 8px 20px;
+  font-weight: 400;
+  font-size: 18px;
+  font-family: "poppins", sans-serif;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.neutral-btn {
+  background-color: #ffffff;
+  color: #333;
+  border-radius: 8px;
+  border: 2px solid #d9d9d9;
+}
+
+.neutral-btn:hover {
+  background-color: rgb(200, 198, 198);
+}
+
+.login-btn {
+  background-color: #e0e0e0;
+  color: #333;
+  border-radius: 8px;
+}
+
+.login-btn:hover {
+  background-color: rgb(200, 198, 198);
+}
+
+/* Profile */
+.profile {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #333;
+}
+
+.profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 10%;
+  /* left: 0; */
+  margin-top: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  display: none;
+  flex-direction: column;
+  min-width: 160px;
+  padding: 10px 0;
+  z-index: 999;
+}
+
+.dropdown-menu a {
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #213943;
+  font-weight: 500;
+  display: block;
+  transition: background-color 0.2s ease;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.dropdown-menu a:last-child {
+  border-bottom: none;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f2f2f2;
+}
+
+/* Buat profile relative supaya dropdown posisi absolut bisa mengikutinya */
+.profile {
+  position: relative;
+  cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../img/CSR.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+  margin-bottom: 0;
+}
+
+.hero-overlay {
+  padding: 40px 20px;
+  border-radius: 8px;
+  max-width: 900px;
+  width: 100%;
+}
+
+.hero-title {
+  color: white;
+  font-family: Poppins;
+  font-size: 35px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #fff;
+}
+
+.hero-subtitle {
+  background-color: #d9efff;
+  color: #fff;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 35px;
+  margin: 0;
+  padding: 12px 20px;
+  font-weight: 600;
+}
+
+/* CSR  */
+.collaborate {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px 60px;
+}
+
+.section-title {
+  color: #66c0ff;
+  font-family: Poppins;
+  font-size: 35px;
+  font-weight: 600;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: box-shadow 0.3s ease;
+  flex: 1 1 300px;
+  max-width: 30%;
+  min-width: 280px;
+}
+
+.card:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.card h4 {
+  color: #213943;
+  font-family: Poppins;
+  font-size: 21px;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.card p {
+  color: #213943;
+  font-family: Poppins;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+/* Footer styles */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f2f2f2;
+  padding: 40px 60px;
+  font-family: "Poppins", sans-serif;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.footer-left,
+.footer-right {
+  flex: 1 1 300px;
+  min-width: 280px;
+}
+
+.footer-left h2 {
+  font-family: "Sriracha", cursive;
+  font-size: 40px;
+  color: #213943;
+  margin-bottom: 15px;
+}
+
+.footer-left p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.footer-left p strong {
+  font-weight: bold;
+  color: #213943;
+}
+
+.sosmed-icons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.footer-right h3 {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #213943;
+  margin-bottom: 20px;
+}
+
+.footer-right ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-right ul li {
+  margin-bottom: 15px;
+}
+
+.footer-right ul li a {
+  color: #555;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.footer-right ul li a:hover {
+  color: #66c0ff;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .aktivitas-cards,
+  .blog-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .aktivitas-btn {
+    width: 100%;
+  }
+
+  .footer {
+    flex-direction: column;
+    padding: 30px 20px;
+  }
+
+  .footer-left,
+  .footer-right {
+    min-width: 100%;
+  }
+}

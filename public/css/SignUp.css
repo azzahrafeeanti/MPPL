@@ -1,0 +1,199 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+  font-family: "poppins", sans-seri;
+}
+
+main {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #213943;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box {
+  position: relative;
+  width: 100%;
+  max-width: 1020px;
+  height: 640px;
+  background: linear-gradient(to bottom, #ffffff, #f4fbff, #e6f6ff, #d8f0ff);
+  border-radius: 50px;
+  box-shadow: 0 60px 40px -30px rgba(0, 0, 0, 0.27);
+  overflow: hidden;
+  display: flex;
+}
+
+.inner-box {
+  position: absolute;
+  width: calc(100% - 4.1rem);
+  height: calc(100% - 4.1rem);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.images {
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  top: 0;
+  left: 0;
+  background: url(/img/buatAkun.png) no-repeat;
+  border-radius: 45px;
+}
+
+.forms-wrap {
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  left: 50%;
+  top: 0;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.heading h2 {
+  font-size: 30px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.heading h4 {
+  font-size: 13px;
+  color: #878787;
+  margin-bottom: 30px;
+  font-weight: 400;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #333;
+  align-self: flex-start;
+  margin-left: 55px;
+}
+
+input {
+  padding: 12px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+  outline: none;
+  width: 300px;
+  max-width: 90%;
+}
+
+.account-link {
+  display: block; /* Agar bisa pakai margin */
+  width: fit-content; /* Lebar mengikuti isi */
+  margin-left: 40%; /* Dorong ke kanan */
+  margin-top: -10px; /* Atur jarak ke atas */
+  margin-bottom: 10px;
+  font-size: 9px;
+  font-weight: 500;
+  color: #666;
+  text-align: right;
+}
+
+.account-link a {
+  color: #333;
+  font-weight: bold;
+  text-decoration: none;
+  margin-left: 2px;
+}
+
+.submit-btn {
+  background-color: #70c4f0;
+  border: none;
+  color: white;
+  padding: 12px 50px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: #48aee4;
+}
+
+.or {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-size: 14px;
+  color: #888;
+  margin: 20px 0 10px;
+  gap: 10px;
+  justify-content: center;
+}
+
+.or::before,
+.or::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background-color: #ccc; /* abu-abu */
+  max-width: 70px;
+}
+
+.social-btn {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.social-btn button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #ccc;
+  background-color: white;
+  border-radius: 25px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.social-btn img {
+  width: 20px;
+  height: 20px;
+}
+
+@media (max-width: 768px) {
+  .box {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .images {
+    width: 100%;
+    height: 250px;
+    border-radius: 50px 50px 0 0;
+  }
+
+  .forms-wrap {
+    width: 100%;
+    padding: 30px;
+  }
+}

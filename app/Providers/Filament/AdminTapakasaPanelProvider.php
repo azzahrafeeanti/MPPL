@@ -24,11 +24,11 @@ class AdminTapakasaPanelProvider extends PanelProvider
     {
         return $panel
             ->default()
-            ->id('admin Tapakasa')
-            ->path('admin Tapakasa')
+            ->id('adminTapakasa')
+            ->path('adminTapakasa')
             ->login()
             ->colors([
-                'primary' => Color::Amber,
+                'primary' => Color::hex('#66C0FF'),
             ])
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\\Filament\\Resources')
             ->discoverPages(in: app_path('Filament/Pages'), for: 'App\\Filament\\Pages')

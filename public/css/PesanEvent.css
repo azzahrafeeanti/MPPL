@@ -1,0 +1,1067 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #ffffff;
+  color: #333;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin: 24px 0 12px 20px;
+}
+
+.back-button {
+  top: 24px;
+  left: 24px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.back-button img {
+  width: 35px;
+  height: 35px;
+}
+
+.section-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #213943;
+  font-family: "poppins", sans-serif;
+  margin-left: 80px;
+  margin-top: 0; /* beri jarak agar tidak ketimpa back-button */
+}
+
+/* Main content */
+
+.main-content {
+  margin-top: 5px;
+  display: flex;
+  gap: 24px;
+  padding: 30px 0;
+}
+
+.left-column,
+.right-column {
+  align-self: flex-start;
+}
+
+/* Left Column */
+.left-column {
+  flex: 6;
+}
+
+.event-banner {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* Tabs */
+.tabs {
+  margin-top: 24px;
+  display: flex;
+  gap: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+.tab {
+  border: none;
+  padding: 10px 20px;
+  font-weight: 600;
+  border-radius: 8px 8px 0 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  background-color: transparent;
+  color: #333;
+  position: relative;
+  bottom: -1px;
+  flex: 1; /* Biar kedua tombol punya lebar sama */
+  text-align: center; /* Biar tulisan di tengah */
+  padding: 12px 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.tab.active {
+  background-color: white;
+  color: #007bff;
+  border-bottom: 2px solid #007bff;
+}
+
+/* Tab Content */
+.tab-content {
+  display: none;
+  padding-top: 20px;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* Ticket Box */
+.ticket-box {
+  background-image: url("../assets/img/tiketPesanEvent.png");
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  position: relative;
+  height: 228px;
+  width: 738px;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0;
+}
+
+.ticket-box .text-wrapper {
+  padding: 50px 24px 0 55px;
+  width: 100%;
+  border-radius: 0 0 12px 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.text-wrapper h3 {
+  font-weight: 400;
+  font-size: 23px;
+  color: #000;
+  font-family: Poppins;
+  margin-bottom: 10px;
+}
+
+.text-wrapper p {
+  font-size: 14px;
+  color: #000;
+  font-family: Inter;
+  font-weight: 400;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.ticket-info span {
+  color: #213943;
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 700;
+  position: absolute;
+  bottom: 30px;
+  left: 55px;
+}
+
+.ticket-counter {
+  position: absolute;
+  bottom: 30px;
+  right: 55px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.counter-btn {
+  background-color: #7ac7ff;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.counter-value {
+  font-family: Inter;
+  font-size: 16px;
+  color: #000;
+}
+
+/* Right column */
+.right-column {
+  flex: 4;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.tab-content p {
+  margin-bottom: 16px; /* Jeda antar paragraf */
+}
+
+.tab-content ul {
+  margin-left: 24px; /* Biar agak menjorok */
+  padding-left: 16px;
+}
+
+.tab-content ul li {
+  margin-bottom: 8px; /* Spasi antar item list */
+}
+
+/* Cards */
+.card {
+  background-color: #fff;
+  padding: 24px;
+  border-radius: 20px;
+  border: 1px solid #f4f4f4;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Event Info Card */
+.event-info-card h2 {
+  font-size: 24px;
+  margin-bottom: 16px;
+  color: #213943;
+  font-family: "poppins", sans-serif;
+  font-weight: 500;
+}
+
+.event-info-card p {
+  margin-bottom: 8px;
+  font-weight: 400;
+  color: #213943;
+  font-size: 18px;
+  font-family: "poppins", sans-serif;
+}
+
+/* Icon + Text sejajar */
+.event-info-card p.with-icon {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.event-info-card p.with-icon img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+/* Centered Organizer in Event Card */
+.event-info-card .aktivitas-organizer {
+  margin-top: 12px;
+  padding-top: 12px;
+  font-weight: 400;
+  font-size: 15px;
+  font-family: "poppins", sans-serif;
+  color: #213943;
+  border-top: 1px solid #e0e0e0;
+  text-align: center;
+}
+
+/* Ticket Card */
+.ticket-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Top row of ticket-card (img + h2 sejajar) */
+.ticket-card-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Konten text tiket */
+.ticket-content {
+  font-weight: 400;
+  font-size: 16px;
+  font-family: "poppins", sans-serif;
+  color: #213943;
+  margin: 0;
+}
+
+/* Harga bar (kiri & kanan) */
+.ticket-price-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #e0e0e0;
+  padding-top: 12px;
+  font-size: 15px;
+  font-family: "poppins", sans-serif;
+  color: #213943;
+}
+
+.ticket-price-row strong {
+  font-weight: 600;
+}
+
+/* Tombol beli tiket */
+.buy-ticket-btn {
+  background-color: #66c0ff;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.buy-ticket-btn:hover,
+.buy-ticket-btn:focus {
+  background-color: #0056b3;
+}
+
+/* Footer styles */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f2f2f2;
+  padding: 40px 60px;
+  font-family: "Poppins", sans-serif;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.footer-left,
+.footer-right {
+  flex: 1 1 300px;
+  min-width: 280px;
+}
+
+.footer-left h2 {
+  font-family: "Sriracha", cursive;
+  font-size: 40px;
+  color: #213943;
+  margin-bottom: 15px;
+}
+
+.footer-left p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.footer-left p strong {
+  font-weight: bold;
+  color: #213943;
+}
+
+.sosmed-icons {
+  display: flex;
+  gap: 12px;
+}
+
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.footer-right h3 {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #213943;
+  margin-bottom: 20px;
+}
+
+.footer-right ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-right ul li {
+  margin-bottom: 15px;
+}
+
+.footer-right ul li a {
+  color: #555;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.footer-right ul li a:hover {
+  color: #66c0ff;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .aktivitas-cards,
+  .blog-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .aktivitas-btn {
+    width: 100%;
+  }
+
+  .footer {
+    flex-direction: column;
+    padding: 30px 20px;
+  }
+
+  .footer-left,
+  .footer-right {
+    min-width: 100%;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #ffffff;
+  color: #333;
+  /* padding-top: 80px; */
+}
+
+header {
+  background: #d9efff;
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: "Sriracha", cursive;
+  font-size: 2.5rem;
+  font-weight: normal;
+  color: #213943;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 25px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #ffdd57;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  height: 3px;
+  width: 25px;
+  background: white;
+  margin-bottom: 5px;
+  border-radius: 2px;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.nav-menu li a {
+  color: #213943;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 18px;
+  font-family: "poppins", sans-serif;
+  transition: color 0.3s ease;
+}
+
+.nav-menu li a:hover {
+  color: #66c0ff;
+}
+
+/* Profile */
+.profile {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #333;
+}
+
+.profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 10%;
+  /* left: 0; */
+  margin-top: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  display: none;
+  flex-direction: column;
+  min-width: 160px;
+  padding: 10px 0;
+  z-index: 999;
+}
+
+.dropdown-menu a {
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #213943;
+  font-weight: 500;
+  display: block;
+  transition: background-color 0.2s ease;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.dropdown-menu a:last-child {
+  border-bottom: none;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f2f2f2;
+}
+
+/* Buat profile relative supaya dropdown posisi absolut bisa mengikutinya */
+.profile {
+  position: relative;
+  cursor: pointer;
+}
+
+/* Main content */
+.main-content {
+  display: flex;
+  gap: 24px;
+  padding:5px 0;
+}
+
+.left-column,
+.right-column {
+  align-self: flex-start;
+}
+
+/* Left Column */
+.left-column {
+  flex: 6;
+}
+
+.event-banner {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* Tabs */
+.tabs {
+  margin-top: 24px;
+  display: flex;
+  gap: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+.tab {
+  border: none;
+  padding: 10px 20px;
+  font-weight: 600;
+  border-radius: 8px 8px 0 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  background-color: transparent;
+  color: #333;
+  position: relative;
+  bottom: -1px;
+  flex: 1; /* Biar kedua tombol punya lebar sama */
+  text-align: center; /* Biar tulisan di tengah */
+  padding: 12px 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.tab.active {
+  background-color: white;
+  color: #007bff;
+  border-bottom: 2px solid #007bff;
+}
+
+/* Tab Content */
+.tab-content {
+  display: none;
+  padding-top: 20px;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* Ticket Box */
+.ticket-box {
+  background-color: #eef7ff;
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 20px;
+  border: 1px solid #cfe4ff;
+}
+
+.ticket-box h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+/* Icon + Text sejajar */
+.ticket-box p.with-icon {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ticket-box p.with-icon img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.ticket-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.ticket-info .price {
+  font-weight: 600;
+  font-size: 16px;
+  color: #333;
+}
+
+.ticket-info .status.sale-ended {
+  color: red;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* Right column */
+.right-column {
+  flex: 4;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.tab-content p {
+  margin-bottom: 16px; /* Jeda antar paragraf */
+}
+
+.tab-content ul {
+  margin-left: 24px; /* Biar agak menjorok */
+  padding-left: 16px;
+}
+
+.tab-content ul li {
+  margin-bottom: 8px; /* Spasi antar item list */
+}
+
+/* Cards */
+.card {
+  background-color: #fff;
+  padding: 24px;
+  border-radius: 20px;
+  border: 1px solid #f4f4f4;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Event Info Card */
+.event-info-card h2 {
+  font-size: 24px;
+  margin-bottom: 16px;
+  color: #213943;
+  font-family: "poppins", sans-serif;
+  font-weight: 500;
+}
+
+.event-info-card p {
+  margin-bottom: 8px;
+  font-weight: 400;
+  color: #213943;
+  font-size: 18px;
+  font-family: "poppins", sans-serif;
+}
+
+/* Icon + Text sejajar */
+.event-info-card p.with-icon {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.event-info-card p.with-icon img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+/* Centered Organizer in Event Card */
+.event-info-card .aktivitas-organizer {
+  margin-top: 12px;
+  padding-top: 12px;
+  font-weight: 400;
+  font-size: 15px;
+  font-family: "poppins", sans-serif;
+  color: #213943;
+  border-top: 1px solid #e0e0e0;
+  text-align: center;
+}
+
+/* Ticket Card */
+.ticket-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Top row of ticket-card (img + h2 sejajar) */
+.ticket-card-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Konten text tiket */
+.ticket-content {
+  font-weight: 400;
+  font-size: 16px;
+  font-family: "poppins", sans-serif;
+  color: #213943;
+  margin: 0;
+}
+
+/* Harga bar (kiri & kanan) */
+.ticket-price-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #e0e0e0;
+  padding-top: 12px;
+  font-size: 15px;
+  font-family: "poppins", sans-serif;
+  color: #213943;
+}
+
+.ticket-price-row strong {
+  font-weight: 600;
+}
+
+/* Tombol beli tiket */
+.buy-ticket-btn {
+  background-color: #66c0ff;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  margin-top: 1.5rem;
+}
+.quantity-input {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.buy-ticket-form {
+  width: 100%;
+}
+
+.buy-ticket-btn:hover,
+.buy-ticket-btn:focus {
+  background-color: #0056b3;
+}
+
+/* Footer styles */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f2f2f2;
+  padding: 40px 60px;
+  font-family: "Poppins", sans-serif;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.footer-left,
+.footer-right {
+  flex: 1 1 300px;
+  min-width: 280px;
+}
+
+.footer-left h2 {
+  font-family: "Sriracha", cursive;
+  font-size: 40px;
+  color: #213943;
+  margin-bottom: 15px;
+}
+
+.footer-left p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.footer-left p strong {
+  font-weight: bold;
+  color: #213943;
+}
+
+.sosmed-social {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  color: #4a9de8;
+}
+
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.footer-right h3 {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #213943;
+  margin-bottom: 20px;
+}
+
+.footer-right ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-right ul li {
+  margin-bottom: 15px;
+}
+
+.footer-right ul li a {
+  color: #555;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.footer-right ul li a:hover {
+  color: #66c0ff;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .main-content {
+    flex-direction: column;
+    padding: 24px;
+    gap: 32px;
+  }
+
+  .left-column,
+  .right-column {
+    flex: unset;
+    width: 100%;
+  }
+
+  .right-column {
+    margin-top: 0;
+    align-items: center;
+  }
+
+  .card {
+    max-width: 100%;
+  }
+
+  .ticket-box {
+    width: 100%;
+  }
+
+  .footer {
+    flex-direction: column;
+    padding: 30px 20px;
+  }
+
+  .footer-left {
+    min-width: 100%;
+  }
+}
+
+/* Hp */
+@media (max-width: 600px) {
+  .main-content {
+    padding: 16px;
+    gap: 32px;
+  }
+
+  .tabs {
+    flex-direction: row;
+    gap: 8px;
+    justify-content: space-between;
+  }
+
+  .tab {
+    flex: 1;
+    border-radius: 8px 8px 0 0;
+    font-size: 14px;
+    padding: 10px 0;
+  }
+
+  .tab-content {
+    padding-top: 16px;
+  }
+
+  .text-wrapper {
+    padding: 24px;
+  }
+
+  .ticket-box {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    height: 180px;
+    padding: 16px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .ticket-box .text-wrapper {
+    padding: 24px 16px 30px 16px;
+    height: auto;
+  }
+
+  .text-wrapper h3 {
+    font-size: 18px;
+  }
+
+  .text-wrapper p {
+    font-size: 12px;
+  }
+
+  .text-wrapper p img {
+    width: 16px;
+    height: 16px;
+  }
+
+  .ticket-bottom {
+    position: static;
+    margin-top: 16px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .ticket-info span {
+    margin-top: 0;
+    font-size: 16px;
+  }
+
+  .ticket-counter {
+    margin-top: 0;
+  }
+
+  .counter-btn {
+    width: 24px;
+    height: 24px;
+    font-size: 18px;
+  }
+
+  .counter-value {
+    font-size: 14px;
+  }
+
+  .right-column {
+    align-items: center;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .footer {
+    flex-direction: column;
+    padding: 30px 20px;
+  }
+
+  .footer-left {
+    min-width: 100%;
+  }
+}
+

@@ -17,7 +17,6 @@ use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken;
 use Illuminate\Routing\Middleware\SubstituteBindings;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
-
 class AdminIdPanelProvider extends PanelProvider
 {
     public function panel(Panel $panel): Panel
@@ -26,7 +25,7 @@ class AdminIdPanelProvider extends PanelProvider
             ->id('adminId')
             ->path('adminId')
             ->colors([
-                'primary' => Color::Amber,
+                'primary' => '66C0FF',
             ])
             ->discoverResources(in: app_path('Filament/AdminId/Resources'), for: 'App\\Filament\\AdminId\\Resources')
             ->discoverPages(in: app_path('Filament/AdminId/Pages'), for: 'App\\Filament\\AdminId\\Pages')
