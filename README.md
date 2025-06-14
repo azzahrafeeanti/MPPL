@@ -1,10 +1,10 @@
 # TapakAsa
 
+![mockup](Mockup.png)
+
 **TapakAsa** adalah platform volunteering yang mempertemukan individu, komunitas, dan perusahaan dengan berbagai kegiatan sosial dari seluruh Indonesia. Melalui satu ruang digital yang tertata, kami memudahkan siapa pun untuk menemukan peran, mendaftar sebagai relawan, dan terlibat langsung dalam aksi nyata yang berdampak.
 
 Kami percaya bahwa kebaikan yang terorganisir akan menjangkau lebih jauh. Karena itu, setiap kegiatan di TapakAsa dirancang agar partisipasi menjadi pengalaman yang mudah, jelas, dan bermakna. Di sinilah langkah kecil punya tempat, dan setiap kontribusi tumbuh menjadi harapan bersama.
-
-![mockup](Mockup.png)
 
 ---
 
