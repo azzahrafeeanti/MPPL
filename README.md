@@ -4,7 +4,7 @@
 
 Kami percaya bahwa kebaikan yang terorganisir akan menjangkau lebih jauh. Karena itu, setiap kegiatan di TapakAsa dirancang agar partisipasi menjadi pengalaman yang mudah, jelas, dan bermakna. Di sinilah langkah kecil punya tempat, dan setiap kontribusi tumbuh menjadi harapan bersama.
 
-![mockup](Mockup.jpg)
+![mockup](Mockup.png)
 
 ---
 
